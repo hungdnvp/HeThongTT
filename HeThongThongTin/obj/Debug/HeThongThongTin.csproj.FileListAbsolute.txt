@@ -24,3 +24,11 @@ D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThong
 D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.exe
 D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.pdb
 D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.PhanCongCV.resources
+D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\bin\Debug\EntityFramework.dll
+D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\bin\Debug\EntityFramework.SqlServer.dll
+D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\bin\Debug\EntityFramework.xml
+D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\bin\Debug\EntityFramework.SqlServer.xml
+D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.csproj.SuggestedBindingRedirects.cache
+D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.KeHoachCV.resources
+D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.NhatKyCV.resources
+D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.TTGiamSat.resources
