@@ -38,6 +38,7 @@
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.9\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
