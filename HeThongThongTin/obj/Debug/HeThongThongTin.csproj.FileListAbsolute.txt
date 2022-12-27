@@ -1,0 +1,12 @@
+F:\Nam4HocKi1\HeThongThongTin\HeThongThongTin\bin\Debug\HeThongThongTin.exe.config
+F:\Nam4HocKi1\HeThongThongTin\HeThongThongTin\bin\Debug\HeThongThongTin.exe
+F:\Nam4HocKi1\HeThongThongTin\HeThongThongTin\bin\Debug\HeThongThongTin.pdb
+F:\Nam4HocKi1\HeThongThongTin\HeThongThongTin\obj\Debug\HeThongThongTin.csproj.AssemblyReference.cache
+F:\Nam4HocKi1\HeThongThongTin\HeThongThongTin\obj\Debug\HeThongThongTin.csproj.SuggestedBindingRedirects.cache
+F:\Nam4HocKi1\HeThongThongTin\HeThongThongTin\obj\Debug\HeThongThongTin.Properties.Resources.resources
+F:\Nam4HocKi1\HeThongThongTin\HeThongThongTin\obj\Debug\HeThongThongTin.csproj.GenerateResource.cache
+F:\Nam4HocKi1\HeThongThongTin\HeThongThongTin\obj\Debug\HeThongThongTin.csproj.CoreCompileInputs.cache
+F:\Nam4HocKi1\HeThongThongTin\HeThongThongTin\obj\Debug\HeThongThongTin.exe
+F:\Nam4HocKi1\HeThongThongTin\HeThongThongTin\obj\Debug\HeThongThongTin.pdb
+F:\Nam4HocKi1\HeThongThongTin\HeThongThongTin\obj\Debug\HeThongThongTin.TrangChu.resources
+F:\Nam4HocKi1\HeThongThongTin\HeThongThongTin\obj\Debug\HeThongThongTin.Login.resources
