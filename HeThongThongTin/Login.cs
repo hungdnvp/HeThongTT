@@ -16,7 +16,6 @@ namespace HeThongThongTin
         {
             InitializeComponent();
         }
-
-
+        
     }
 }
