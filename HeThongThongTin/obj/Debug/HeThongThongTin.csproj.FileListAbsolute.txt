@@ -15,7 +15,6 @@ D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\bin\Debug\HeThong
 D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\bin\Debug\HeThongThongTin.pdb
 D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\bin\Debug\Guna.UI2.dll
 D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.csproj.AssemblyReference.cache
-D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.csproj.SuggestedBindingRedirects.cache
 D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.TrangChu.resources
 D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.Login.resources
 D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.Properties.Resources.resources
@@ -24,3 +23,4 @@ D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThong
 D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.csproj.CopyComplete
 D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.exe
 D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.pdb
+D:\some crazy things about myself\HTTT\PhanMem\HeThongThongTin\obj\Debug\HeThongThongTin.PhanCongCV.resources
