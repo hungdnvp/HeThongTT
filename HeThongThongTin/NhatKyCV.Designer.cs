@@ -40,9 +40,10 @@
             this.btnQuaylai = new Guna.UI2.WinForms.Guna2Button();
             this.CboDonvi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lableDonVi = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.label_Title = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label_Title = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnThietLap = new Guna.UI2.WinForms.Guna2Button();
             this.btnTTGiamSat = new Guna.UI2.WinForms.Guna2Button();
             this.btnKeHoachCT = new Guna.UI2.WinForms.Guna2Button();
@@ -57,7 +58,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.dtGV = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.MaNK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThoiGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -145,6 +145,17 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1488, 96);
             this.guna2Panel2.TabIndex = 19;
             // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Times New Roman", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(295, 36);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(173, 26);
+            this.guna2HtmlLabel4.TabIndex = 17;
+            this.guna2HtmlLabel4.Text = "Ngày Hoàn Thành:";
+            // 
             // lableDonVi
             // 
             this.lableDonVi.BackColor = System.Drawing.Color.Transparent;
@@ -152,20 +163,9 @@
             this.lableDonVi.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lableDonVi.Location = new System.Drawing.Point(40, 36);
             this.lableDonVi.Name = "lableDonVi";
-            this.lableDonVi.Size = new System.Drawing.Size(84, 28);
+            this.lableDonVi.Size = new System.Drawing.Size(74, 26);
             this.lableDonVi.TabIndex = 12;
             this.lableDonVi.Text = "Đơn vị :";
-            // 
-            // label_Title
-            // 
-            this.label_Title.BackColor = System.Drawing.Color.Transparent;
-            this.label_Title.Font = new System.Drawing.Font("Times New Roman", 24.21818F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Title.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label_Title.Location = new System.Drawing.Point(1174, 74);
-            this.label_Title.Name = "label_Title";
-            this.label_Title.Size = new System.Drawing.Size(189, 44);
-            this.label_Title.TabIndex = 16;
-            this.label_Title.Text = "Đại Đội 155";
             // 
             // guna2DateTimePicker1
             // 
@@ -179,6 +179,17 @@
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(235, 28);
             this.guna2DateTimePicker1.TabIndex = 10;
             this.guna2DateTimePicker1.Value = new System.DateTime(2022, 12, 27, 14, 58, 24, 231);
+            // 
+            // label_Title
+            // 
+            this.label_Title.BackColor = System.Drawing.Color.Transparent;
+            this.label_Title.Font = new System.Drawing.Font("Times New Roman", 24.21818F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Title.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label_Title.Location = new System.Drawing.Point(1174, 74);
+            this.label_Title.Name = "label_Title";
+            this.label_Title.Size = new System.Drawing.Size(163, 38);
+            this.label_Title.TabIndex = 16;
+            this.label_Title.Text = "Đại Đội 155";
             // 
             // btnThietLap
             // 
@@ -216,11 +227,12 @@
             this.btnKeHoachCT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnKeHoachCT.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKeHoachCT.ForeColor = System.Drawing.Color.White;
-            this.btnKeHoachCT.Location = new System.Drawing.Point(797, 9);
+            this.btnKeHoachCT.Location = new System.Drawing.Point(803, 8);
             this.btnKeHoachCT.Name = "btnKeHoachCT";
             this.btnKeHoachCT.Size = new System.Drawing.Size(258, 64);
             this.btnKeHoachCT.TabIndex = 3;
             this.btnKeHoachCT.Text = "Kế Hoạch Công Tác";
+            this.btnKeHoachCT.Click += new System.EventHandler(this.btnKeHoachCT_Click_1);
             // 
             // btnPhanCongCV
             // 
@@ -287,7 +299,7 @@
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(1102, 13);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(342, 55);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(299, 49);
             this.guna2HtmlLabel3.TabIndex = 15;
             this.guna2HtmlLabel3.Text = "NHẬT KÝ CÔNG VIỆC\r\n";
             // 
@@ -298,7 +310,7 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(217, 69);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(566, 55);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(491, 49);
             this.guna2HtmlLabel2.TabIndex = 14;
             this.guna2HtmlLabel2.Text = "Phần mềm hỗ trợ chỉ huy điều hành";
             // 
@@ -309,7 +321,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(228, 10);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(550, 60);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(480, 52);
             this.guna2HtmlLabel1.TabIndex = 13;
             this.guna2HtmlLabel1.Text = "HỌC VIỆN KỸ THUẬT QUÂN SỰ";
             // 
@@ -397,17 +409,6 @@
             this.dtGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGV_CellClick);
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Times New Roman", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(295, 36);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(198, 28);
-            this.guna2HtmlLabel4.TabIndex = 17;
-            this.guna2HtmlLabel4.Text = "Ngày Hoàn Thành:";
             // 
             // MaNK
             // 

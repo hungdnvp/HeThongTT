@@ -16,7 +16,7 @@ namespace HeThongThongTin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KHCongtacTieuDoan());
+            Application.Run(new PhanCongCvHVien());
         }
     }
 }
