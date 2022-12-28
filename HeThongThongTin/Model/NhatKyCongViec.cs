@@ -16,6 +16,7 @@ namespace HeThongThongTin
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaNK { get; set; }
 
         public int? HoanThanh { get; set; }

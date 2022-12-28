@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\CanBo.cs" />
+    <Compile Include="Model\CapDonVi.cs" />
+    <Compile Include="Model\DonVi.cs" />
+    <Compile Include="Model\HocVien.cs" />
+    <Compile Include="Model\HTTT.cs" />
+    <Compile Include="Model\KeHoachCongTac.cs" />
     <Compile Include="KeHoachCV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,33 +93,39 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\CanBo.cs" />
-    <Compile Include="Model\CapDonVi.cs" />
-    <Compile Include="Model\DonVi.cs" />
-    <Compile Include="Model\HocVien.cs" />
-    <Compile Include="Model\HTTT.cs" />
-    <Compile Include="Model\KeHoachCongTac.cs" />
-    <Compile Include="Model\NhanXetKeHoach.cs" />
-    <Compile Include="Model\NhanXetNhatKy.cs" />
-    <Compile Include="Model\NhatKyCongViec.cs" />
-    <Compile Include="Model\PhanCong.cs" />
-    <Compile Include="Model\sysdiagram.cs" />
-    <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\viewKeHoach.cs" />
     <Compile Include="Model\ViewNhanXet.cs" />
     <Compile Include="Model\ViewNhatKy.cs" />
     <Compile Include="Model\viewPhanCong.cs" />
+    <Compile Include="Model\NhanXetKeHoach.cs" />
+    <Compile Include="Model\NhanXetNhatKy.cs" />
+    <Compile Include="Model\NhatKyCongViec.cs" />
     <Compile Include="NhatKyCV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NhatKyCV.Designer.cs">
       <DependentUpon>NhatKyCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\PhanCong.cs" />
     <Compile Include="PhanCongCV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PhanCongCV.Designer.cs">
       <DependentUpon>PhanCongCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagram.cs" />
+    <Compile Include="Model\TaiKhoan.cs" />
+    <Compile Include="PhanCongDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanCongDetail.Designer.cs">
+      <DependentUpon>PhanCongDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemNX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemNX.Designer.cs">
+      <DependentUpon>ThemNX.cs</DependentUpon>
     </Compile>
     <Compile Include="PhanCongCvHVien.cs">
       <SubType>Form</SubType>
@@ -161,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PhanCongCV.resx">
       <DependentUpon>PhanCongCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanCongDetail.resx">
+      <DependentUpon>PhanCongDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemNX.resx">
+      <DependentUpon>ThemNX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhanCongCvHVien.resx">
       <DependentUpon>PhanCongCvHVien.cs</DependentUpon>

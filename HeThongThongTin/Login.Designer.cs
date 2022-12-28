@@ -164,6 +164,7 @@
             this.ClientSize = new System.Drawing.Size(635, 489);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

@@ -43,9 +43,11 @@ namespace HeThongThongTin
                 TaiKhoan tk = Context.TaiKhoans.Where(c => c.TenDangNhap == username && c.MatKhau == password).FirstOrDefault();
                 if (tk != null)
                 {
-                    NhatKyCV nhatKyCV = new NhatKyCV(tk);
+                    //NhatKyCV nhatKyCV = new NhatKyCV(tk);
+                    PhanCongDetail pcdt = new PhanCongDetail(tk, "3");
                     this.Hide();
-                    nhatKyCV.Show();
+                    //nhatKyCV.Show();
+                    pcdt.Show();
                 }
                 else
                 {
