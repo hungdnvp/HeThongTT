@@ -14,6 +14,7 @@ namespace HeThongThongTin
 {
     public partial class NhatKyCV : Form
     {
+        string phienhieudonvi;
         TaiKhoan taikhoan = new TaiKhoan();
         public NhatKyCV(TaiKhoan tk)
         {
@@ -21,11 +22,11 @@ namespace HeThongThongTin
             InitializeComponent();
         }
 
-        public void ShowNhatKy(string phienhieu)
+        public void ShowNhatKy()
         {
             using (HTTT db = new HTTT())
             {
-                List<ViewNhatKy> list_nk = db.Database.SqlQuery<ViewNhatKy>("View_NhatKy " + phienhieu).ToList();
+                List<ViewNhatKy> list_nk = db.Database.SqlQuery<ViewNhatKy>("View_NhatKy " + phienhieudonvi).ToList();
                 dtGV.DataSource = list_nk;
             }
         }
@@ -37,18 +38,19 @@ namespace HeThongThongTin
                 {
                     case 3:
                         HocVien hocvien = db.HocViens.Where(c => c.MaTK == taikhoan.MaTK).FirstOrDefault();
-                        string donvi = hocvien.PhienHieuDonVi.ToString().Substring(1);
-                        label_Title.Text = "Đại Đội " + donvi;
+                        phienhieudonvi = hocvien.PhienHieuDonVi;
+                        label_Title.Text = "Đại Đội " + hocvien.PhienHieuDonVi.ToString().Substring(1);
                         lableDonVi.Visible = false;
                         CboDonvi.Visible = false;
-                        ShowNhatKy(hocvien.PhienHieuDonVi);
+                        ShowNhatKy();
                         break;
                     case 2:
                         CanBo canbo = db.CanBoes.Where(c => c.MaTK == taikhoan.MaTK).FirstOrDefault();
-                        string dv = canbo.PhienHieuDonVi.ToString().Substring(1);
-                        label_Title.Text = "Đại Đội " + dv;
+                        phienhieudonvi = canbo.PhienHieuDonVi;
+                        label_Title.Text = "Đại Đội " + canbo.PhienHieuDonVi.ToString().Substring(1);
                         lableDonVi.Visible = false;
                         CboDonvi.Visible = false;
+                        ShowNhatKy();
                         break;
                     case 1:
                         CanBo cb = db.CanBoes.Where(c => c.MaTK == taikhoan.MaTK).FirstOrDefault();
@@ -73,10 +75,27 @@ namespace HeThongThongTin
             {
                 string tenDV = CboDonvi.Text;
 
-                string phienhieu = "c" + tenDV.Substring(tenDV.Length - 3);
-                ShowNhatKy(phienhieu);
+                phienhieudonvi = "c" + tenDV.Substring(tenDV.Length - 3);
+                ShowNhatKy();
             }
         }
 
+        private void dtGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >=0)
+            {
+                if(taikhoan.role == 3)
+                {
+                    MessageBox.Show("Bạn Không có quyền xem phần chức năng này", "Thông báo");
+                }
+                else
+                {
+                    string MaNK = dtGV.Rows[e.RowIndex].Cells["MaNK"].Value.ToString();
+                    ViewNhanXetNhatKy view = new ViewNhanXetNhatKy(MaNK);
+                    view.Show();
+                }
+            }
+        }
     }
 }
