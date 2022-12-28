@@ -20,6 +20,7 @@ namespace HeThongThongTin
         {
             this.taikhoan = tk;
             InitializeComponent();
+            btnNhatKyCV.FillColor = Color.Purple;
         }
 
         public void ShowNhatKy()
@@ -83,7 +84,7 @@ namespace HeThongThongTin
         private void dtGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >=0)
+            if (senderGrid.Columns[e.ColumnIndex].Name == "NhanXet" && e.RowIndex >=0)
             {
                 if(taikhoan.role == 3)
                 {
@@ -96,6 +97,24 @@ namespace HeThongThongTin
                     view.Show();
                 }
             }
+            if(senderGrid.Columns[e.ColumnIndex].Name == "ThemNX" && e.RowIndex >= 0)
+            {
+                if(taikhoan.role == 3)
+                {
+                    MessageBox.Show("Bạn Không có quyền xem phần chức năng này", "Thông báo");
+                }
+                else
+                {
+                    string MaNK = dtGV.Rows[e.RowIndex].Cells["MaNK"].Value.ToString();
+                    ThemNX themNX = new ThemNX(MaNK,taikhoan.MaTK);
+                    themNX.Show();
+                }
+            }
+        }
+
+        private void dateimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

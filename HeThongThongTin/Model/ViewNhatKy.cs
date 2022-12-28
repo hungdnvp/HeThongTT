@@ -15,6 +15,7 @@ namespace HeThongThongTin.Model
         public string DiaDiem { set; get; }
         public DateTime? ThoiGian { set; get; }
         public string NhanXet { set; get; }
+        public string ThemNX { set; get; }
 
     }
 }
