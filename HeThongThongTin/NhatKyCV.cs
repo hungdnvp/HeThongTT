@@ -20,6 +20,7 @@ namespace HeThongThongTin
         {
             this.taikhoan = tk;
             InitializeComponent();
+            btnNhatKyCV.FillColor = Color.Purple;
         }
 
         public void ShowNhatKy()
@@ -97,12 +98,12 @@ namespace HeThongThongTin
                 }
             }
         }
+        
 
-       
 
         private void btnKeHoachCT_Click_1(object sender, EventArgs e)
         {
-            KeHoachCV nhatKyCV = new KeHoachCV(/*taikhoan*/);
+            KeHoachCV nhatKyCV = new KeHoachCV(taikhoan);
             this.Hide();
             nhatKyCV.Show();
         }

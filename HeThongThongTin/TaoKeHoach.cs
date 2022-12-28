@@ -9,12 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace HeThongThongTin
 {
     public partial class TaoKeHoach : Form
     {
-        public TaoKeHoach()
+        string phienhieudonvi;
+        TaiKhoan taikhoan = new TaiKhoan();
+        public TaoKeHoach(TaiKhoan tk, string donvi)
         {
+            this.phienhieudonvi= donvi;
+            this.taikhoan = tk;
             InitializeComponent();
         }
 
@@ -34,38 +39,29 @@ namespace HeThongThongTin
 
         private void btnTaomoi_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    using (HTTT httt = new HTTT())
-            //    {
-            //        Room R = new Room();
-            //        R.id = txbRoomId.Text;
-            //        R.description = txbDes.Text;
-            //        R.status = false;
-            //        R.image = pathImage;
-            //        var R_C = ht.Room_Class.Where(p => p.name == cbR_C.Text).FirstOrDefault();
-            //        if (R_C != null)
-            //        {
-            //            R.room_class_id = R_C.id;
-            //        }
-            //        if (R.id == "" || R.description == "" || R_C == null)
-            //        {
-            //            MessageBox.Show("Thêm thất bại", "Thông báo");
-            //        }
-            //        else
-            //        {
-            //            ht.Rooms.Add(R);
-            //            ht.SaveChanges();
-            //            MessageBox.Show("Thêm thành công", "Thông báo");
-            //            refesh();
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Thêm thất bại", "Thông báo");
-            //    Console.WriteLine(ex.Message);
-            //}
+            try
+            {
+                using (HTTT httt = new HTTT())
+                {
+                    KeHoachCongTac khct = new KeHoachCongTac();
+                        khct.NoiDungKH= txbNoiDung.Text;
+                        khct.TPThucHien = txbTPThucHien.Text;
+                        khct.PhienHieuDonVi= phienhieudonvi;
+                        khct.DiaDiem = txbDiaDiem.Text;
+                        khct.MaTrucBan = 1;
+                    //khct.CanBo = cboChiHuy.Text;
+                        httt.KeHoachCongTacs.Add(khct);
+                        httt.SaveChanges();
+                        MessageBox.Show("Thêm thành công", "Thông báo");
+                        refesh();
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thêm thất bại", "Thông báo");
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

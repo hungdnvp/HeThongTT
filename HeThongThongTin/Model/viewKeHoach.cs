@@ -8,7 +8,7 @@ namespace HeThongThongTin.Model
 {
     internal class viewKeHoach
     {
-        public int MaNK { set; get; }
+        public int MaKH { set; get; }
         public string TrangThai { set; get; }
       
         public string NoiDungKH { set; get; }
