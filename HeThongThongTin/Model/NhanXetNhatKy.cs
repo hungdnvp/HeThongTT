@@ -10,12 +10,14 @@ namespace HeThongThongTin
     public partial class NhanXetNhatKy
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaNXNK { get; set; }
 
         public int? MaNK { get; set; }
 
         public int? MaCB { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? ThoiGian { get; set; }
 
         public string NhanXet { get; set; }
 

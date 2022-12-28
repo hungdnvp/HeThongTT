@@ -23,8 +23,9 @@ namespace HeThongThongTin
         public string MatKhau { get; set; }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaTK { get; set; }
+
+        public int? role { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CanBo> CanBoes { get; set; }

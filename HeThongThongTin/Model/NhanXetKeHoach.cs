@@ -10,7 +10,6 @@ namespace HeThongThongTin
     public partial class NhanXetKeHoach
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaNXKH { get; set; }
 
         public int? MaKH { get; set; }

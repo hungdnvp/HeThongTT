@@ -94,6 +94,10 @@
     <Compile Include="Model\NhanXetNhatKy.cs" />
     <Compile Include="Model\NhatKyCongViec.cs" />
     <Compile Include="Model\PhanCong.cs" />
+    <Compile Include="Model\sysdiagram.cs" />
+    <Compile Include="Model\TaiKhoan.cs" />
+    <Compile Include="Model\ViewNhanXet.cs" />
+    <Compile Include="Model\ViewNhatKy.cs" />
     <Compile Include="Model\viewPhanCong.cs" />
     <Compile Include="NhatKyCV.cs">
       <SubType>Form</SubType>
@@ -107,8 +111,6 @@
     <Compile Include="PhanCongCV.Designer.cs">
       <DependentUpon>PhanCongCV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\sysdiagram.cs" />
-    <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="PhanCongCvHVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +130,12 @@
     </Compile>
     <Compile Include="TTGiamSat.Designer.cs">
       <DependentUpon>TTGiamSat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewNhanXetNhatKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewNhanXetNhatKy.Designer.cs">
+      <DependentUpon>ViewNhanXetNhatKy.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="KeHoachCV.resx">
       <DependentUpon>KeHoachCV.cs</DependentUpon>
@@ -162,6 +170,9 @@
     </Compile>
     <EmbeddedResource Include="TTGiamSat.resx">
       <DependentUpon>TTGiamSat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewNhanXetNhatKy.resx">
+      <DependentUpon>ViewNhanXetNhatKy.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -12,11 +12,11 @@ namespace HeThongThongTin
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HocVien()
         {
+            KeHoachCongTacs = new HashSet<KeHoachCongTac>();
             PhanCongs = new HashSet<PhanCong>();
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaHV { get; set; }
 
         [StringLength(50)]
@@ -33,6 +33,9 @@ namespace HeThongThongTin
         public virtual DonVi DonVi { get; set; }
 
         public virtual TaiKhoan TaiKhoan { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<KeHoachCongTac> KeHoachCongTacs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhanCong> PhanCongs { get; set; }

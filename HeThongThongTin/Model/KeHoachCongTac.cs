@@ -44,7 +44,11 @@ namespace HeThongThongTin
         [StringLength(200)]
         public string TrangThai { get; set; }
 
+        public virtual CanBo CanBo { get; set; }
+
         public virtual DonVi DonVi { get; set; }
+
+        public virtual HocVien HocVien { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NhanXetKeHoach> NhanXetKeHoaches { get; set; }
