@@ -166,7 +166,7 @@
             this.lableDonVi.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lableDonVi.Location = new System.Drawing.Point(40, 36);
             this.lableDonVi.Name = "lableDonVi";
-            this.lableDonVi.Size = new System.Drawing.Size(84, 28);
+            this.lableDonVi.Size = new System.Drawing.Size(74, 26);
             this.lableDonVi.TabIndex = 12;
             this.lableDonVi.Text = "Đơn vị :";
             // 
@@ -231,11 +231,12 @@
             this.btnKeHoachCT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnKeHoachCT.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKeHoachCT.ForeColor = System.Drawing.Color.White;
-            this.btnKeHoachCT.Location = new System.Drawing.Point(797, 9);
+            this.btnKeHoachCT.Location = new System.Drawing.Point(803, 8);
             this.btnKeHoachCT.Name = "btnKeHoachCT";
             this.btnKeHoachCT.Size = new System.Drawing.Size(258, 64);
             this.btnKeHoachCT.TabIndex = 3;
             this.btnKeHoachCT.Text = "Kế Hoạch Công Tác";
+            this.btnKeHoachCT.Click += new System.EventHandler(this.btnKeHoachCT_Click_1);
             // 
             // btnPhanCongCV
             // 
@@ -302,7 +303,7 @@
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(1102, 13);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(342, 55);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(299, 49);
             this.guna2HtmlLabel3.TabIndex = 15;
             this.guna2HtmlLabel3.Text = "NHẬT KÝ CÔNG VIỆC\r\n";
             // 
@@ -313,7 +314,7 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(217, 69);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(566, 55);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(491, 49);
             this.guna2HtmlLabel2.TabIndex = 14;
             this.guna2HtmlLabel2.Text = "Phần mềm hỗ trợ chỉ huy điều hành";
             // 
@@ -324,7 +325,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(228, 10);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(550, 60);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(480, 52);
             this.guna2HtmlLabel1.TabIndex = 13;
             this.guna2HtmlLabel1.Text = "HỌC VIỆN KỸ THUẬT QUÂN SỰ";
             // 

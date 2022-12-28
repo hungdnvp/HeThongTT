@@ -46,6 +46,9 @@
     <Reference Include="Guna.UI2, Version=2.0.3.9, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.9\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="NugetOrgDev, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI.WinForms.Net.2.0.4.9\lib\net48\NugetOrgDev.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -72,6 +75,12 @@
     <Compile Include="KeHoachCV.Designer.cs">
       <DependentUpon>KeHoachCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="KHCongtacTieuDoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHCongtacTieuDoan.Designer.cs">
+      <DependentUpon>KHCongtacTieuDoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,8 +99,10 @@
     <Compile Include="Model\PhanCong.cs" />
     <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
+    <Compile Include="Model\viewKeHoach.cs" />
     <Compile Include="Model\ViewNhanXet.cs" />
     <Compile Include="Model\ViewNhatKy.cs" />
+    <Compile Include="Model\viewPhanCong.cs" />
     <Compile Include="NhatKyCV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +120,18 @@
     </Compile>
     <Compile Include="ThemNX.Designer.cs">
       <DependentUpon>ThemNX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanCongCvHVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanCongCvHVien.Designer.cs">
+      <DependentUpon>PhanCongCvHVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaoKeHoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoKeHoach.Designer.cs">
+      <DependentUpon>TaoKeHoach.cs</DependentUpon>
     </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
@@ -133,6 +156,9 @@
     <EmbeddedResource Include="KeHoachCV.resx">
       <DependentUpon>KeHoachCV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KHCongtacTieuDoan.resx">
+      <DependentUpon>KHCongtacTieuDoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +170,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemNX.resx">
       <DependentUpon>ThemNX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanCongCvHVien.resx">
+      <DependentUpon>PhanCongCvHVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoKeHoach.resx">
+      <DependentUpon>TaoKeHoach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
