@@ -16,7 +16,9 @@ namespace HeThongThongTin
         public PhanCongCV()
         {
             InitializeComponent();
-           
+            btnPhanCongCV.FillColor = Color.Purple;
+
+
             using (HTTT httt = new HTTT())
             {
                 var DV = httt.DonVis.Where(p =>p.MaCap == 2).ToList();

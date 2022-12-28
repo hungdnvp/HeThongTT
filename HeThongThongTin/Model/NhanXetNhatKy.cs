@@ -16,10 +16,10 @@ namespace HeThongThongTin
 
         public int? MaCB { get; set; }
 
+        public string NhanXet { get; set; }
+
         [Column(TypeName = "date")]
         public DateTime? ThoiGian { get; set; }
-
-        public string NhanXet { get; set; }
 
         public virtual CanBo CanBo { get; set; }
 
