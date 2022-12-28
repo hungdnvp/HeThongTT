@@ -11,47 +11,44 @@ using System.Windows.Forms;
 
 namespace HeThongThongTin
 {
-    public partial class PhanCongCV : Form
+    public partial class PhanCongCvHVien : Form
     {
-        public PhanCongCV()
+        public PhanCongCvHVien()
         {
             InitializeComponent();
-           
-            using (HTTT httt = new HTTT())
-            {
-                var DV = httt.DonVis.Where(p =>p.MaCap == 2).ToList();
-                foreach(var tendv in DV)
-                {
-                    CboDonvi.Items.Add(tendv.TenDonVi);
-                }    
-            }    
         }
 
-        private void PhanCongCV_Load(object sender, EventArgs e)
+        private void PhanCongCvHVien_Load(object sender, EventArgs e)
         {
-            loadDTGV("exec phancongCV");
+            string value = txbname.Text;
+            loadDTGV("exec phancongCV_hv "+ " N'" + value + "'");
+            AddButton();
         }
         private void loadDTGV(string query)
         {
             try
             {
                 using (HTTT httt = new HTTT())
-                    {
+                {
                     var listPC = httt.Database.SqlQuery<viewPhanCong>(query).ToList();
                     dtgDSUser.DataSource = listPC;
-                    }
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
 
         }
-
-        private void btnNhatKyCV_Click(object sender, EventArgs e)
+        private void AddButton()
         {
-            Form f = new PhanCongCvHVien();
-            f.ShowDialog();
+            DataGridViewButtonColumn btnDetail = new DataGridViewButtonColumn();
+            btnDetail.HeaderText = "";
+            btnDetail.Text = "Chi tiết";
+            btnDetail.Name = "btnDetail";
+            btnDetail.UseColumnTextForButtonValue = true;
+            btnDetail.FillWeight = 100;
+            dtgDSUser.Columns.Add(btnDetail);
         }
     }
 }

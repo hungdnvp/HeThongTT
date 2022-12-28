@@ -72,6 +72,12 @@
     <Compile Include="KeHoachCV.Designer.cs">
       <DependentUpon>KeHoachCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="KHCongtacTieuDoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHCongtacTieuDoan.Designer.cs">
+      <DependentUpon>KHCongtacTieuDoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,7 @@
     <Compile Include="Model\NhanXetNhatKy.cs" />
     <Compile Include="Model\NhatKyCongViec.cs" />
     <Compile Include="Model\PhanCong.cs" />
+    <Compile Include="Model\viewPhanCong.cs" />
     <Compile Include="NhatKyCV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +109,12 @@
     </Compile>
     <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
+    <Compile Include="PhanCongCvHVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanCongCvHVien.Designer.cs">
+      <DependentUpon>PhanCongCvHVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +132,9 @@
     <EmbeddedResource Include="KeHoachCV.resx">
       <DependentUpon>KeHoachCV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KHCongtacTieuDoan.resx">
+      <DependentUpon>KHCongtacTieuDoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PhanCongCV.resx">
       <DependentUpon>PhanCongCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanCongCvHVien.resx">
+      <DependentUpon>PhanCongCvHVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
