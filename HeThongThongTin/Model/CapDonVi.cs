@@ -16,7 +16,6 @@ namespace HeThongThongTin
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaCap { get; set; }
 
         [StringLength(50)]

@@ -16,12 +16,14 @@ namespace HeThongThongTin
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaNK { get; set; }
 
         public int? HoanThanh { get; set; }
 
         public string TrangThai { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? ThoiGianHoanThanh { get; set; }
 
         public virtual KeHoachCongTac KeHoachCongTac { get; set; }
 

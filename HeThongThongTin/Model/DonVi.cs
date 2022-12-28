@@ -12,6 +12,7 @@ namespace HeThongThongTin
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DonVi()
         {
+            CanBoes = new HashSet<CanBo>();
             HocViens = new HashSet<HocVien>();
             KeHoachCongTacs = new HashSet<KeHoachCongTac>();
         }
@@ -24,6 +25,9 @@ namespace HeThongThongTin
         public string TenDonVi { get; set; }
 
         public int? MaCap { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CanBo> CanBoes { get; set; }
 
         public virtual CapDonVi CapDonVi { get; set; }
 

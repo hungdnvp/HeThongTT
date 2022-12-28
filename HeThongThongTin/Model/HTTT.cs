@@ -30,6 +30,11 @@ namespace HeThongThongTin
                 .Property(e => e.PhienHieuDonVi)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<CanBo>()
+                .HasMany(e => e.KeHoachCongTacs)
+                .WithOptional(e => e.CanBo)
+                .HasForeignKey(e => e.MaChiHuy);
+
             modelBuilder.Entity<DonVi>()
                 .Property(e => e.PhienHieuDonVi)
                 .IsUnicode(false);
@@ -37,6 +42,11 @@ namespace HeThongThongTin
             modelBuilder.Entity<HocVien>()
                 .Property(e => e.PhienHieuDonVi)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<HocVien>()
+                .HasMany(e => e.KeHoachCongTacs)
+                .WithOptional(e => e.HocVien)
+                .HasForeignKey(e => e.MaTrucBan);
 
             modelBuilder.Entity<HocVien>()
                 .HasMany(e => e.PhanCongs)

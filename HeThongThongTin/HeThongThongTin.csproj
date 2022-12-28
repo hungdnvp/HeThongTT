@@ -88,6 +88,9 @@
     <Compile Include="Model\NhanXetNhatKy.cs" />
     <Compile Include="Model\NhatKyCongViec.cs" />
     <Compile Include="Model\PhanCong.cs" />
+    <Compile Include="Model\sysdiagram.cs" />
+    <Compile Include="Model\TaiKhoan.cs" />
+    <Compile Include="Model\ViewNhatKy.cs" />
     <Compile Include="NhatKyCV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,8 +103,6 @@
     <Compile Include="PhanCongCV.Designer.cs">
       <DependentUpon>PhanCongCV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\sysdiagram.cs" />
-    <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -12,12 +12,12 @@ namespace HeThongThongTin
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CanBo()
         {
+            KeHoachCongTacs = new HashSet<KeHoachCongTac>();
             NhanXetKeHoaches = new HashSet<NhanXetKeHoach>();
             NhanXetNhatKies = new HashSet<NhanXetNhatKy>();
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaCB { get; set; }
 
         [StringLength(100)]
@@ -37,9 +37,14 @@ namespace HeThongThongTin
         public virtual TaiKhoan TaiKhoan { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<KeHoachCongTac> KeHoachCongTacs { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NhanXetKeHoach> NhanXetKeHoaches { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NhanXetNhatKy> NhanXetNhatKies { get; set; }
+
+        public virtual DonVi DonVi { get; set; }
     }
 }
