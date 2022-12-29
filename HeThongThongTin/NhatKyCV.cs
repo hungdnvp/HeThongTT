@@ -114,7 +114,12 @@ namespace HeThongThongTin
 
         private void dateimePicker_ValueChanged(object sender, EventArgs e)
         {
-
+            string date = dateimePicker.Value.Date.ToString("yyyy-MM-dd");
+            using (HTTT db = new HTTT())
+            {
+                List<ViewNhatKy> list_nk = db.Database.SqlQuery<ViewNhatKy>("ViewNhatKy2 " + phienhieudonvi+", '" + date+"'").ToList();
+                dtGV.DataSource = list_nk;
+            }
         }
         
 
@@ -128,6 +133,14 @@ namespace HeThongThongTin
             //{
             //    this.Show();
             //}
+        }
+
+        private void btnTTGiamSat_Click(object sender, EventArgs e)
+        {
+            TTGiamSat tt = new TTGiamSat(taikhoan);
+            this.Hide();
+            tt.Show();
+
         }
     }
 }
