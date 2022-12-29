@@ -88,5 +88,42 @@ namespace HeThongThongTin
 
             }
         }
+
+        private void bt_PCtudong_Click(object sender, EventArgs e)
+        {
+            using (HTTT db = new HTTT())
+            {
+                Lhv = db.HocViens.ToList();
+                int makh = int.Parse(MaKH);
+                int sl = int.Parse(txtSoLuong.Text.Trim());
+                if(sl > Lhv.Count()) { MessageBox.Show("Số lượng không hợp lệ", "Thông Báo", MessageBoxButtons.OK); return; }
+                // tim hoc vien co so phan cong it nhat
+                var descendingComparer = Comparer<int>.Create((z, y) => y.CompareTo(z));
+                SortedList<int, int> descSortedList = new SortedList<int, int>(descendingComparer);
+                foreach (HocVien item in Lhv)
+                {
+                    if (db.PhanCongs.Where(c => c.MaKH == makh && c.MaHV == item.MaHV).Count() > 0) continue;
+                    int k = db.PhanCongs.Where(c => c.MaHV == item.MaHV).Count();
+                    descSortedList.Add(item.MaHV,k);
+                }
+                for(int pc =0; pc < sl; pc++)
+                {
+                    try
+                    {
+                        PhanCong phancong = new PhanCong();
+                        phancong.MaHV = descSortedList.Keys[pc];
+                        phancong.MaKH = int.Parse(MaKH);
+                        phancong.NoiDungCV = richTextBox1.Text;
+                        db.PhanCongs.Add(phancong);
+                    }
+                    catch { MessageBox.Show("Phân công trùng lặp", "Thông Báo", MessageBoxButtons.OK); }
+                }
+                db.SaveChanges();
+                MessageBox.Show("Đã Phân Công", "Thông Báo", MessageBoxButtons.OK);
+                Lhv.Clear();
+                txtHocvien.Clear();
+
+            }
+        }
     }
 }

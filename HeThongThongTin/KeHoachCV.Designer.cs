@@ -99,6 +99,7 @@
             this.dtgDSUser.Location = new System.Drawing.Point(0, 369);
             this.dtgDSUser.Name = "dtgDSUser";
             this.dtgDSUser.RowHeadersVisible = false;
+            this.dtgDSUser.RowHeadersWidth = 47;
             this.dtgDSUser.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Gainsboro;
             this.dtgDSUser.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.MidnightBlue;
             this.dtgDSUser.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Azure;
@@ -263,7 +264,7 @@
             this.label_Title.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label_Title.Location = new System.Drawing.Point(1208, 69);
             this.label_Title.Name = "label_Title";
-            this.label_Title.Size = new System.Drawing.Size(143, 34);
+            this.label_Title.Size = new System.Drawing.Size(163, 39);
             this.label_Title.TabIndex = 16;
             this.label_Title.Text = "Đại đội 155\r\n";
             // 
@@ -274,7 +275,7 @@
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(1102, 13);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(299, 49);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(342, 55);
             this.guna2HtmlLabel3.TabIndex = 15;
             this.guna2HtmlLabel3.Text = "NHẬT KÝ CÔNG VIỆC\r\n";
             // 
@@ -285,7 +286,7 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(217, 69);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(491, 49);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(566, 55);
             this.guna2HtmlLabel2.TabIndex = 14;
             this.guna2HtmlLabel2.Text = "Phần mềm hỗ trợ chỉ huy điều hành";
             // 
@@ -296,12 +297,13 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(228, 10);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(480, 52);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(550, 60);
             this.guna2HtmlLabel1.TabIndex = 13;
             this.guna2HtmlLabel1.Text = "HỌC VIỆN KỸ THUẬT QUÂN SỰ";
             // 
             // guna2ContextMenuStrip1
             // 
+            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
             this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
             this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
@@ -372,6 +374,7 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "KeHoachCV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KeHoachCV";
             this.Load += new System.EventHandler(this.KeHoachCV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgDSUser)).EndInit();

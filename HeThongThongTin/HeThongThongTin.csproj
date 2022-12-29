@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="GhiNhatKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,18 @@
     <Compile Include="sanH4.Designer.cs">
       <DependentUpon>sanH4.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemCanBo.Designer.cs">
+      <DependentUpon>ThemCanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemHocVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemHocVien.Designer.cs">
+      <DependentUpon>ThemHocVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemNX.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +189,9 @@
     <Compile Include="ViewNhanXetNhatKy.Designer.cs">
       <DependentUpon>ViewNhanXetNhatKy.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GhiNhatKy.resx">
       <DependentUpon>GhiNhatKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +215,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sanH4.resx">
       <DependentUpon>sanH4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemCanBo.resx">
+      <DependentUpon>ThemCanBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemHocVien.resx">
+      <DependentUpon>ThemHocVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemNX.resx">
       <DependentUpon>ThemNX.cs</DependentUpon>

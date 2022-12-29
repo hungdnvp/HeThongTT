@@ -152,6 +152,7 @@ namespace HeThongThongTin
                     pcdt.Show();
                    
                     loaddtgv("exec hienthikehoach " + phienhieudonvi);
+                    dtgDSUser.Refresh();
 
                 }
             }
