@@ -77,5 +77,14 @@ namespace HeThongThongTin
                 txtHocvien.Clear();
             }
         }
+
+        private void PhanCongDetail_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            using (HTTT db = new HTTT())
+            {
+                KeHoachCongTac kh = db.KeHoachCongTacs.Find(int.Parse(MaKH));
+                kh.TrangThai = "3";
+            }
+        }
     }
 }

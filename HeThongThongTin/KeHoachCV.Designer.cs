@@ -61,7 +61,7 @@
             this.tpthamgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pheduyet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nhanxet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trangthai = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDSUser)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -185,10 +185,16 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgDSUser.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgDSUser.GridColor = System.Drawing.Color.MidnightBlue;
+            this.dtgDSUser.GridColor = System.Drawing.Color.Navy;
             this.dtgDSUser.Location = new System.Drawing.Point(0, 369);
             this.dtgDSUser.Name = "dtgDSUser";
             this.dtgDSUser.RowHeadersVisible = false;
+            this.dtgDSUser.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Gainsboro;
+            this.dtgDSUser.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.dtgDSUser.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Azure;
+            this.dtgDSUser.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Blue;
+            this.dtgDSUser.RowTemplate.Height = 30;
+            this.dtgDSUser.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgDSUser.Size = new System.Drawing.Size(1584, 580);
             this.dtgDSUser.TabIndex = 18;
             this.dtgDSUser.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -197,7 +203,7 @@
             this.dtgDSUser.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dtgDSUser.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dtgDSUser.ThemeStyle.BackColor = System.Drawing.Color.Azure;
-            this.dtgDSUser.ThemeStyle.GridColor = System.Drawing.Color.MidnightBlue;
+            this.dtgDSUser.ThemeStyle.GridColor = System.Drawing.Color.Navy;
             this.dtgDSUser.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtgDSUser.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtgDSUser.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -209,7 +215,7 @@
             this.dtgDSUser.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgDSUser.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgDSUser.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgDSUser.ThemeStyle.RowsStyle.Height = 22;
+            this.dtgDSUser.ThemeStyle.RowsStyle.Height = 30;
             this.dtgDSUser.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgDSUser.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtgDSUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDSUser_CellClick);
@@ -402,6 +408,7 @@
             this.pheduyet.DataPropertyName = "PheDuyet";
             this.pheduyet.HeaderText = "Phê Duyệt";
             this.pheduyet.Name = "pheduyet";
+            this.pheduyet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Nhanxet
             // 
@@ -415,7 +422,6 @@
             this.trangthai.HeaderText = "Trạng Thái";
             this.trangthai.Name = "trangthai";
             this.trangthai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.trangthai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // KeHoachCV
             // 
@@ -471,6 +477,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tpthamgia;
         private System.Windows.Forms.DataGridViewTextBoxColumn pheduyet;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nhanxet;
-        private System.Windows.Forms.DataGridViewButtonColumn trangthai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn trangthai;
     }
 }

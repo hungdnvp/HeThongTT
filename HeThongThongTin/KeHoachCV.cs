@@ -20,7 +20,6 @@ namespace HeThongThongTin
             this.taikhoan = tk;
             InitializeComponent();
             btnKeHoachCT.FillColor = Color.Purple;
-            AddButton();
             //using (HTTT httt = new HTTT())
             //{
             //    var DV = httt.DonVis.Where(p => p.MaCap == 2).ToList();
@@ -31,7 +30,7 @@ namespace HeThongThongTin
             //}
         }
 
-     private void loaddtgv( string query)
+        private void loaddtgv(string query)
         {
             try
             {
@@ -85,43 +84,84 @@ namespace HeThongThongTin
                 }
             }
 
-           
+
 
         }
 
         private void CboDonvi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            loaddtgv("exec hienthikehoach " + CboDonvi.Text);
+            loaddtgv("exec hienthikehoach " + phienhieudonvi);
         }
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            Form F = new TaoKeHoach(taikhoan,phienhieudonvi);
+            Form F = new TaoKeHoach(taikhoan, phienhieudonvi);
             F.ShowDialog();
-            loaddtgv("exec hienthikehoach " + CboDonvi.Text);
+            loaddtgv("exec hienthikehoach " + phienhieudonvi);
         }
-        private void AddButton()
-        {
-            DataGridViewButtonColumn btnDetail = new DataGridViewButtonColumn();
-            btnDetail.HeaderText = "";
-            btnDetail.Text = "Xem Nhật Xét";
-            btnDetail.Name = "btnNhanxet";
-            btnDetail.UseColumnTextForButtonValue = true;
-            btnDetail.FillWeight = 100;
-            dtgDSUser.Columns.Add(btnDetail);
-        }
+       
         private void dtgDSUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //var senderGrid = (DataGridView)sender;
             //Console.WriteLine(e.RowIndex);
-            //Console.WriteLine(e.ColumnIndex);
-            if(dtgDSUser.Rows[e.RowIndex].Cells["pheduyet"].Value.ToString() == "Chưa phê duyệt")
+            Console.WriteLine(e.ColumnIndex);
+            if (dtgDSUser.Rows[e.RowIndex].Cells["pheduyet"].Value.ToString() == "Chưa phê duyệt" && e.ColumnIndex == 8 && taikhoan.role == 1)
             {
-                //Console.WriteLine(dtgDSUser.Rows[e.RowIndex].Cells["nguoichutri"].Value.ToString());
-                //using (HTTT db = new HTTT())
-                //{
-                //    KeHoachCongTac khct = db.KeHoachCongTacs.FirstOrDefault(k =>k.ma )
-                //}
+                using (HTTT db = new HTTT())
+                {
+                    string makh = dtgDSUser.Rows[e.RowIndex].Cells["maKeHoach"].Value.ToString();
+                    Console.WriteLine(makh);
+                    KeHoachCongTac khct = db.KeHoachCongTacs.Where(p => p.MaKH.ToString() == makh).FirstOrDefault();
+                    khct.PheDuyet = 1;
+                    khct.TrangThai = "2";
+                    db.SaveChanges();
+                    loaddtgv("exec hienthikehoach " + phienhieudonvi);
+
+                }
             }
+
+            else if (dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString() == "chưa hoàn thành" && e.ColumnIndex == 2 && taikhoan.role == 2)
+            {
+                using (HTTT db = new HTTT())
+                {
+                    string makh = dtgDSUser.Rows[e.RowIndex].Cells["maKeHoach"].Value.ToString();
+                    Console.WriteLine(makh);
+                    KeHoachCongTac khct = db.KeHoachCongTacs.Where(p => p.MaKH.ToString() == makh).FirstOrDefault();
+                    khct.TrangThai = "4";
+                    db.SaveChanges();
+                    loaddtgv("exec hienthikehoach " + phienhieudonvi);
+
+                }
+            }
+            else if (dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString() == "chờ phân công" && e.ColumnIndex == 2 && taikhoan.role == 2)
+            {
+                using (HTTT db = new HTTT())
+                {
+                    string makh = dtgDSUser.Rows[e.RowIndex].Cells["maKeHoach"].Value.ToString();
+                    Console.WriteLine(makh);
+                    KeHoachCongTac khct = db.KeHoachCongTacs.Where(p => p.MaKH.ToString() == makh).FirstOrDefault();
+                    PhanCongDetail pcdt = new PhanCongDetail(taikhoan, makh);
+                    pcdt.Show();
+                   
+                    db.SaveChanges();
+                    loaddtgv("exec hienthikehoach " + phienhieudonvi);
+
+                }
+            }
+
+            //        if (senderGrid.Columns[e.ColumnIndex].Name == "trangthai" && e.RowIndex >= 0 && taikhoan.role == 2)
+            //{
+            //    string makh = dtgDSUser.Rows[e.RowIndex].Cells["maKeHoach"].Value.ToString();
+            //    string trangthai = dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString();
+            //    if (trangthai == "chưa hoàn thành")
+            //    {
+            //        PhanCongDetail pcdt = new PhanCongDetail(taikhoan, makh);
+            //        pcdt.Show();
+            //    }
+
+            //}
+
         }
-    }
+     }
+    
 }

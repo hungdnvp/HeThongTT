@@ -86,7 +86,7 @@ namespace HeThongThongTin
             var senderGrid = (DataGridView)sender;
             if (senderGrid.Columns[e.ColumnIndex].Name == "NhanXet" && e.RowIndex >=0)
             {
-                if(taikhoan.role == 3)
+                if(taikhoan.role == 3|| taikhoan.role == 2)
                 {
                     MessageBox.Show("Bạn Không có quyền xem phần chức năng này", "Thông báo");
                 }
@@ -99,7 +99,7 @@ namespace HeThongThongTin
             }
             if(senderGrid.Columns[e.ColumnIndex].Name == "ThemNX" && e.RowIndex >= 0)
             {
-                if(taikhoan.role == 3)
+                if(taikhoan.role == 3 || taikhoan.role == 2)
                 {
                     MessageBox.Show("Bạn Không có quyền xem phần chức năng này", "Thông báo");
                 }

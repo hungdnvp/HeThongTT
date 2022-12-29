@@ -30,14 +30,14 @@
         {
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.comboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtHocvien = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btPhanCong = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.comboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtHocvien = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btPhanCong = new Guna.UI2.WinForms.Guna2Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +49,7 @@
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(20, 23);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(84, 22);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(74, 21);
             this.guna2HtmlLabel5.TabIndex = 13;
             this.guna2HtmlLabel5.Text = "công việc :";
             // 
@@ -63,6 +63,29 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(649, 400);
             this.guna2Panel1.TabIndex = 14;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2Panel2.Controls.Add(this.comboBox);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2Panel2.Controls.Add(this.txtHocvien);
+            this.guna2Panel2.Location = new System.Drawing.Point(3, 121);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(615, 191);
+            this.guna2Panel2.TabIndex = 21;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Times New Roman", 13.74545F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Navy;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(227, 9);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(150, 22);
+            this.guna2HtmlLabel3.TabIndex = 19;
+            this.guna2HtmlLabel3.Text = "Học viên thực hiện";
             // 
             // comboBox
             // 
@@ -80,14 +103,6 @@
             this.comboBox.TabIndex = 14;
             this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(110, 23);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(498, 95);
-            this.richTextBox1.TabIndex = 15;
-            this.richTextBox1.Text = "";
-            // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
@@ -95,9 +110,20 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(22, 123);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(150, 22);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(128, 21);
             this.guna2HtmlLabel1.TabIndex = 16;
             this.guna2HtmlLabel1.Text = "Học viên đã thêm :";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(22, 65);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(100, 21);
+            this.guna2HtmlLabel2.TabIndex = 18;
+            this.guna2HtmlLabel2.Text = "Thêm học viên";
             // 
             // txtHocvien
             // 
@@ -120,28 +146,6 @@
             this.txtHocvien.Size = new System.Drawing.Size(392, 29);
             this.txtHocvien.TabIndex = 17;
             // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(22, 65);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(117, 22);
-            this.guna2HtmlLabel2.TabIndex = 18;
-            this.guna2HtmlLabel2.Text = "Thêm học viên";
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Times New Roman", 13.74545F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Navy;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(227, 9);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(170, 26);
-            this.guna2HtmlLabel3.TabIndex = 19;
-            this.guna2HtmlLabel3.Text = "Học viên thực hiện";
-            // 
             // btPhanCong
             // 
             this.btPhanCong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -157,17 +161,13 @@
             this.btPhanCong.Text = "Phân Công";
             this.btPhanCong.Click += new System.EventHandler(this.btPhanCong_Click);
             // 
-            // guna2Panel2
+            // richTextBox1
             // 
-            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2Panel2.Controls.Add(this.comboBox);
-            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2Panel2.Controls.Add(this.txtHocvien);
-            this.guna2Panel2.Location = new System.Drawing.Point(3, 121);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(615, 191);
-            this.guna2Panel2.TabIndex = 21;
+            this.richTextBox1.Location = new System.Drawing.Point(110, 23);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(498, 95);
+            this.richTextBox1.TabIndex = 15;
+            this.richTextBox1.Text = "";
             // 
             // PhanCongDetail
             // 
@@ -177,6 +177,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "PhanCongDetail";
             this.Text = "Phân Công Chi Tiết";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PhanCongDetail_FormClosed);
             this.Load += new System.EventHandler(this.PhanCongDetail_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
