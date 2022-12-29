@@ -45,6 +45,8 @@ namespace HeThongThongTin
                         label_Title.Text = "Đại Đội " + hocvien.PhienHieuDonVi.ToString().Substring(1);
                         lableDonVi.Visible = false;
                         CboDonvi.Visible = false;
+                        comboThietLap.Items.Add("Đổi Mật Khẩu");
+                        comboThietLap.Items.Add("Đăng Xuất");
                         ShowNhatKy();
                         break;
                     case 2:
@@ -53,17 +55,26 @@ namespace HeThongThongTin
                         label_Title.Text = "Đại Đội " + canbo.PhienHieuDonVi.ToString().Substring(1);
                         lableDonVi.Visible = false;
                         CboDonvi.Visible = false;
+                        comboThietLap.Items.Add("Thêm Học Viên");
+                        comboThietLap.Items.Add("Đổi Mật Khẩu");
+                        comboThietLap.Items.Add("Đăng Xuất");
+
                         ShowNhatKy();
                         break;
                     case 1:
                         CanBo cb = db.CanBoes.Where(c => c.MaTK == taikhoan.MaTK).FirstOrDefault();
+                        phienhieudonvi = cb.PhienHieuDonVi;
                         string dv2 = cb.PhienHieuDonVi.ToString().Substring(1);
                         label_Title.Text = "Tiểu Đoàn " + dv2;
                         List<DonVi> list_dv = db.DonVis.Where(c => c.MaCap == 2).ToList();
-                        foreach(var item in list_dv)
+                        foreach (var item in list_dv)
                         {
                             CboDonvi.Items.Add(item.TenDonVi);
                         }
+                        CboDonvi.SelectedIndex = 0;
+                        comboThietLap.Items.Add("Thêm Cán Bộ");
+                        comboThietLap.Items.Add("Đổi Mật Khẩu");
+                        comboThietLap.Items.Add("Đăng Xuất");
                         break;
                 }
                 
@@ -88,7 +99,7 @@ namespace HeThongThongTin
             var senderGrid = (DataGridView)sender;
             if (senderGrid.Columns[e.ColumnIndex].Name == "NhanXet" && e.RowIndex >=0)
             {
-                if(taikhoan.role == 3|| taikhoan.role == 2)
+                if(taikhoan.role == 3)
                 {
                     MessageBox.Show("Bạn Không có quyền xem phần chức năng này", "Thông báo");
                 }
@@ -101,7 +112,7 @@ namespace HeThongThongTin
             }
             if(senderGrid.Columns[e.ColumnIndex].Name == "ThemNX" && e.RowIndex >= 0)
             {
-                if(taikhoan.role == 3 || taikhoan.role == 2)
+                if(taikhoan.role == 3)
                 {
                     MessageBox.Show("Bạn Không có quyền xem phần chức năng này", "Thông báo");
                 }
@@ -159,6 +170,39 @@ namespace HeThongThongTin
                     dtGV.DataSource = list_nk;
                 }
             }
+        }
+
+        private void comboThietLap_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboThietLap.Text == "Đăng Xuất")
+            {
+                this.Close();
+            }else if(comboThietLap.Text == "Đổi Mật Khẩu")
+            {
+                DoiMatKhau doiMatKhau = new DoiMatKhau(taikhoan);
+                doiMatKhau.ShowDialog();
+            }
+            else if (comboThietLap.Text == "Thêm Học Viên")
+            {
+                ThemHocVien themhv = new ThemHocVien(phienhieudonvi);
+                themhv.ShowDialog();
+            }
+            else if (comboThietLap.Text == "Thêm Cán Bộ")
+            {
+                ThemCanBo themcb = new ThemCanBo();
+                themcb.ShowDialog();
+            }
+
+        }
+
+        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
+        {
+            comboThietLap_Click(sender, e);
+        }
+
+        private void comboThietLap_Click(object sender, EventArgs e)
+        {
+            label.Hide();
         }
     }
 }

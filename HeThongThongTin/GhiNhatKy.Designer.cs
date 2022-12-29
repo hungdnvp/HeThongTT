@@ -50,7 +50,7 @@
             this.lableDonVi.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lableDonVi.Location = new System.Drawing.Point(52, 68);
             this.lableDonVi.Name = "lableDonVi";
-            this.lableDonVi.Size = new System.Drawing.Size(69, 21);
+            this.lableDonVi.Size = new System.Drawing.Size(78, 22);
             this.lableDonVi.TabIndex = 13;
             this.lableDonVi.Text = "Nhận xét: ";
             // 
@@ -61,7 +61,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(52, 250);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(65, 21);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(75, 22);
             this.guna2HtmlLabel1.TabIndex = 14;
             this.guna2HtmlLabel1.Text = "Kết quả :";
             // 
@@ -97,6 +97,7 @@
             // 
             // GhiNhatKy
             // 
+            this.AcceptButton = this.btnGhiNhatKy;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(675, 446);
@@ -106,6 +107,7 @@
             this.Controls.Add(this.lableDonVi);
             this.Controls.Add(this.richTextBox1);
             this.Name = "GhiNhatKy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GhiNhatKy";
             this.Load += new System.EventHandler(this.GhiNhatKy_Load);
             this.ResumeLayout(false);
