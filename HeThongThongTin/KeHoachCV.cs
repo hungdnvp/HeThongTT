@@ -19,7 +19,7 @@ namespace HeThongThongTin
         {
             this.taikhoan = tk;
             InitializeComponent();
-            btnKeHoachCT.FillColor = Color.Purple;
+          
             //using (HTTT httt = new HTTT())
             //{
             //    var DV = httt.DonVis.Where(p => p.MaCap == 2).ToList();
@@ -58,7 +58,6 @@ namespace HeThongThongTin
                         HocVien hocvien = db.HocViens.Where(c => c.MaTK == taikhoan.MaTK).FirstOrDefault();
                         phienhieudonvi = hocvien.PhienHieuDonVi;
                         label_Title.Text = "Đại Đội " + hocvien.PhienHieuDonVi.ToString().Substring(1);
-                        lableDonVi.Visible = false;
                         CboDonvi.Visible = false;
 
                         break;
@@ -66,7 +65,6 @@ namespace HeThongThongTin
                         CanBo canbo = db.CanBoes.Where(c => c.MaTK == taikhoan.MaTK).FirstOrDefault();
                         phienhieudonvi = canbo.PhienHieuDonVi;
                         label_Title.Text = "Đại Đội " + canbo.PhienHieuDonVi.ToString().Substring(1);
-                        lableDonVi.Visible = false;
                         CboDonvi.Visible = false;
                         loaddtgv("exec hienthikehoach " + phienhieudonvi);
 
@@ -176,6 +174,11 @@ namespace HeThongThongTin
         {
             this.Close();
 
+        }
+
+        private void btnQuaylai_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     

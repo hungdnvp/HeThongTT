@@ -128,6 +128,11 @@ namespace HeThongThongTin
 
         private void btnKeHoachCT_Click_1(object sender, EventArgs e)
         {
+            if(taikhoan.role==3)
+            {
+                MessageBox.Show("Bạn không có quyền truy cập chức năng này", "Thông báo");
+            }
+            else {
             KeHoachCV kehoach = new KeHoachCV(taikhoan);
             this.Hide();
             DialogResult result = kehoach.ShowDialog();
@@ -135,13 +140,25 @@ namespace HeThongThongTin
             {
                 this.Show();
             }
+            }
         }
 
         private void btnTTGiamSat_Click(object sender, EventArgs e)
         {
-            TTGiamSat tt = new TTGiamSat(taikhoan);
-            this.Hide();
-            tt.Show();
+            if (taikhoan.role == 3)
+            {
+                MessageBox.Show("Bạn không có quyền truy cập chức năng này", "Thông báo");
+            }
+            else
+            {
+                TTGiamSat tt = new TTGiamSat(taikhoan);
+                this.Hide();
+                DialogResult result = tt.ShowDialog();
+                if (result == DialogResult.Cancel)
+                {
+                    this.Show();
+                };
+            }
 
         }
 
@@ -165,7 +182,11 @@ namespace HeThongThongTin
         {
             PhanCongCV pc = new PhanCongCV(taikhoan);
             this.Hide();
-            pc.Show();
+            DialogResult result = pc.ShowDialog();
+            if (result == DialogResult.Cancel)
+            {
+                this.Show();
+            }
         }
     }
 }

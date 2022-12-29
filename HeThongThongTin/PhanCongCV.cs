@@ -91,8 +91,7 @@ namespace HeThongThongTin
 
         private void btnNhatKyCV_Click(object sender, EventArgs e)
         {
-            Form f = new PhanCongCvHVien();
-            f.ShowDialog();
+            this.Close();
         }
 
         private void CboDonvi_SelectedIndexChanged(object sender, EventArgs e)
@@ -117,6 +116,11 @@ namespace HeThongThongTin
 
                 }
             }
+        }
+
+        private void btnQuaylai_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     }
