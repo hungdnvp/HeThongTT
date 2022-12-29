@@ -23,14 +23,14 @@ namespace HeThongThongTin
             btnPhanCongCV.FillColor = Color.Purple;
 
 
-            using (HTTT httt = new HTTT())
-            {
-                var DV = httt.DonVis.Where(p =>p.MaCap == 2).ToList();
-                foreach(var tendv in DV)
-                {
-                    CboDonvi.Items.Add(tendv.TenDonVi);
-                }    
-            }    
+            //using (HTTT httt = new HTTT())
+            //{
+            //    var DV = httt.DonVis.Where(p =>p.MaCap == 2).ToList();
+            //    foreach(var tendv in DV)
+            //    {
+            //        CboDonvi.Items.Add(tendv.TenDonVi);
+            //    }    
+            //}    
         }
 
         private void PhanCongCV_Load(object sender, EventArgs e)
@@ -44,14 +44,14 @@ namespace HeThongThongTin
                         phienhieudonvi = hocvien.PhienHieuDonVi;
                         label_Title.Text = "Đại Đội " + hocvien.PhienHieuDonVi.ToString().Substring(1);
                         CboDonvi.Visible = false;
-                        //loadDTGV("exec phancongCV " + '');
+                        loadDTGV("exec phancongCV_hv  " + "'" + hocvien.TenHV + "'," + phienhieudonvi);
                         break;
                     case 2:
                         CanBo canbo = db.CanBoes.Where(c => c.MaTK == taikhoan.MaTK).FirstOrDefault();
                         phienhieudonvi = canbo.PhienHieuDonVi;
                         label_Title.Text = "Đại Đội " + canbo.PhienHieuDonVi.ToString().Substring(1);
                         CboDonvi.Visible = false;
-                       
+                        loadDTGV("exec phancongCV_hv  " + "''," + phienhieudonvi);
 
                         break;
                     case 1:
@@ -63,22 +63,26 @@ namespace HeThongThongTin
                         {
                             CboDonvi.Items.Add(item.PhienHieuDonVi);
                         }
+
                         break;
+
                 }
+
+
             }
-           
+
         }
         private void loadDTGV(string query)
         {
             try
             {
                 using (HTTT httt = new HTTT())
-                    {
+                {
                     var listPC = httt.Database.SqlQuery<viewPhanCong>(query).ToList();
                     dtgDSUser.DataSource = listPC;
-                    }
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -90,5 +94,29 @@ namespace HeThongThongTin
             Form f = new PhanCongCvHVien();
             f.ShowDialog();
         }
+
+        private void CboDonvi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            phienhieudonvi = CboDonvi.SelectedItem.ToString();
+            loadDTGV("exec phancongCV_hv  " + "''," + phienhieudonvi);
+        }
+
+        private void dtgDSUser_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgDSUser.Rows[e.RowIndex].Cells["TrangThai"].Value.ToString() == "Chưa hoàn thành" && taikhoan.role == 3)
+            {
+                using (HTTT db = new HTTT())
+                {
+                    string makh = dtgDSUser.Rows[e.RowIndex].Cells["maKH"].Value.ToString();
+                    string ndcv = dtgDSUser.Rows[e.RowIndex].Cells["noidungcv"].Value.ToString();
+                    Console.WriteLine(makh);
+                    PhanCong khct = db.PhanCongs.Where(p => p.MaKH.ToString() == makh && p.NoiDungCV==ndcv).FirstOrDefault();
+                    khct.HoanThanh=1;
+                    db.SaveChanges();
+                    loadDTGV("exec phancongCV_hv  " + "''," + phienhieudonvi);
+
+                }
+            }
+        }
     }
-}
+    }

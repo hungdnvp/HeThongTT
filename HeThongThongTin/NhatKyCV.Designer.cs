@@ -155,7 +155,7 @@
             this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(295, 36);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(198, 28);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(173, 26);
             this.guna2HtmlLabel4.TabIndex = 17;
             this.guna2HtmlLabel4.Text = "Ngày Hoàn Thành:";
             // 
@@ -166,7 +166,7 @@
             this.lableDonVi.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lableDonVi.Location = new System.Drawing.Point(40, 36);
             this.lableDonVi.Name = "lableDonVi";
-            this.lableDonVi.Size = new System.Drawing.Size(84, 28);
+            this.lableDonVi.Size = new System.Drawing.Size(74, 26);
             this.lableDonVi.TabIndex = 12;
             this.lableDonVi.Text = "Đơn vị :";
             // 
@@ -191,7 +191,7 @@
             this.label_Title.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label_Title.Location = new System.Drawing.Point(1174, 74);
             this.label_Title.Name = "label_Title";
-            this.label_Title.Size = new System.Drawing.Size(189, 44);
+            this.label_Title.Size = new System.Drawing.Size(163, 38);
             this.label_Title.TabIndex = 16;
             this.label_Title.Text = "Đại Đội 155";
             // 
@@ -252,6 +252,7 @@
             this.btnPhanCongCV.Size = new System.Drawing.Size(272, 64);
             this.btnPhanCongCV.TabIndex = 2;
             this.btnPhanCongCV.Text = "Phân Công Công Việc";
+            this.btnPhanCongCV.Click += new System.EventHandler(this.btnPhanCongCV_Click);
             // 
             // btnNhatKyCV
             // 
@@ -304,7 +305,7 @@
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(1102, 13);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(342, 55);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(299, 49);
             this.guna2HtmlLabel3.TabIndex = 15;
             this.guna2HtmlLabel3.Text = "NHẬT KÝ CÔNG VIỆC\r\n";
             // 
@@ -315,7 +316,7 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(217, 69);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(566, 55);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(491, 49);
             this.guna2HtmlLabel2.TabIndex = 14;
             this.guna2HtmlLabel2.Text = "Phần mềm hỗ trợ chỉ huy điều hành";
             // 
@@ -326,7 +327,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(228, 10);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(550, 60);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(480, 52);
             this.guna2HtmlLabel1.TabIndex = 13;
             this.guna2HtmlLabel1.Text = "HỌC VIỆN KỸ THUẬT QUÂN SỰ";
             // 

@@ -142,5 +142,12 @@ namespace HeThongThongTin
             tt.Show();
 
         }
+
+        private void btnPhanCongCV_Click(object sender, EventArgs e)
+        {
+            PhanCongCV pc = new PhanCongCV(taikhoan);
+            this.Hide();
+            pc.Show();
+        }
     }
 }
