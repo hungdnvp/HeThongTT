@@ -180,6 +180,25 @@ namespace HeThongThongTin
         {
             this.Close();
         }
+
+        private void btntaokehoach_Click(object sender, EventArgs e)
+        {
+            if (taikhoan.role == 2)
+            {
+                TaoKeHoach kehoach = new TaoKeHoach(taikhoan, phienhieudonvi);
+                this.Hide();
+                DialogResult result = kehoach.ShowDialog();
+                if (result == DialogResult.Cancel)
+                {
+                    this.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền truy cập", "Thông báo");
+            }    
+           
+        }
     }
     
 }

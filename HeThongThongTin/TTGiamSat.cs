@@ -23,7 +23,13 @@ namespace HeThongThongTin
         private void guna2Panel3_Paint(object sender, PaintEventArgs e)
         {
             //sanH4 h4 = new sanH4();
-            //h4.Show();
+            //this.Hide();
+            //DialogResult result = h4.ShowDialog();
+            //if (result == DialogResult.Cancel)
+            //{
+            //    this.Show();
+            //}
+          
         }
 
         private void guna2Panel6_Paint(object sender, PaintEventArgs e)

@@ -59,10 +59,10 @@
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.dtGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.MaNK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThoiGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoanThanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoanThanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NhanXet = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ThemNX = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -343,10 +343,10 @@
             this.dtGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNK,
-            this.NoiDung,
-            this.ThoiGian,
-            this.HoanThanh,
             this.TrangThai,
+            this.ThoiGian,
+            this.NoiDung,
+            this.HoanThanh,
             this.DiaDiem,
             this.NhanXet,
             this.ThemNX});
@@ -399,12 +399,29 @@
             // 
             // MaNK
             // 
-            this.MaNK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MaNK.DataPropertyName = "MaNK";
             this.MaNK.FillWeight = 10F;
             this.MaNK.HeaderText = "Mã Nhật Ký";
             this.MaNK.MinimumWidth = 6;
             this.MaNK.Name = "MaNK";
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.FillWeight = 35F;
+            this.TrangThai.HeaderText = "Trạng thái";
+            this.TrangThai.MinimumWidth = 6;
+            this.TrangThai.Name = "TrangThai";
+            // 
+            // ThoiGian
+            // 
+            this.ThoiGian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ThoiGian.DataPropertyName = "ThoiGian";
+            this.ThoiGian.FillWeight = 30F;
+            this.ThoiGian.HeaderText = "Lên kế hoạch";
+            this.ThoiGian.MinimumWidth = 6;
+            this.ThoiGian.Name = "ThoiGian";
             // 
             // NoiDung
             // 
@@ -414,15 +431,6 @@
             this.NoiDung.MinimumWidth = 6;
             this.NoiDung.Name = "NoiDung";
             // 
-            // ThoiGian
-            // 
-            this.ThoiGian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ThoiGian.DataPropertyName = "ThoiGian";
-            this.ThoiGian.FillWeight = 20F;
-            this.ThoiGian.HeaderText = "Lên kế hoạch";
-            this.ThoiGian.MinimumWidth = 6;
-            this.ThoiGian.Name = "ThoiGian";
-            // 
             // HoanThanh
             // 
             this.HoanThanh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -430,19 +438,10 @@
             dataGridViewCellStyle3.Format = "d";
             dataGridViewCellStyle3.NullValue = null;
             this.HoanThanh.DefaultCellStyle = dataGridViewCellStyle3;
-            this.HoanThanh.FillWeight = 20F;
+            this.HoanThanh.FillWeight = 30F;
             this.HoanThanh.HeaderText = "Hoàn thành";
             this.HoanThanh.MinimumWidth = 6;
             this.HoanThanh.Name = "HoanThanh";
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.FillWeight = 70F;
-            this.TrangThai.HeaderText = "Trạng thái";
-            this.TrangThai.MinimumWidth = 6;
-            this.TrangThai.Name = "TrangThai";
             // 
             // DiaDiem
             // 
@@ -532,10 +531,10 @@
         private Guna.UI2.WinForms.Guna2ComboBox comboSX;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoiDung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGian;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoanThanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGian;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoiDung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoanThanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaDiem;
         private System.Windows.Forms.DataGridViewButtonColumn NhanXet;
         private System.Windows.Forms.DataGridViewButtonColumn ThemNX;

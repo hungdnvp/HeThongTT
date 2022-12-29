@@ -21,6 +21,14 @@ namespace HeThongThongTin
             this.phienhieudonvi= donvi;
             this.taikhoan = tk;
             InitializeComponent();
+            using (HTTT httt = new HTTT())
+            {
+                var DV = httt.CanBoes.Where(p => p.PhienHieuDonVi == donvi).ToList();
+                foreach (var tendv in DV)
+                {
+                    cboChiHuy.Items.Add(tendv.HoTen);
+                }
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -35,6 +43,7 @@ namespace HeThongThongTin
             txbNoiDung.Text = "";
             txbTPThucHien.Text = "";
             cboChiHuy.Text = "";
+
         }
 
         private void btnTaomoi_Click(object sender, EventArgs e)
@@ -49,8 +58,9 @@ namespace HeThongThongTin
                         khct.PhienHieuDonVi= phienhieudonvi;
                         khct.DiaDiem = txbDiaDiem.Text;
                         khct.MaTrucBan = 1;
-                    //khct.CanBo = cboChiHuy.Text;
-                        httt.KeHoachCongTacs.Add(khct);
+                        //khct.CanBo = cboChiHuy.Text;
+                        //khct=timeKH.
+                        //httt.KeHoachCongTacs.Add(khct);
                         httt.SaveChanges();
                         MessageBox.Show("Thêm thành công", "Thông báo");
                         refesh();
