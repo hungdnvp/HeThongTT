@@ -90,14 +90,14 @@ namespace HeThongThongTin
 
         private void CboDonvi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            loaddtgv("exec hienthikehoach " + phienhieudonvi);
+            loaddtgv("exec hienthikehoach " + CboDonvi.Text);
         }
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
             Form F = new TaoKeHoach(taikhoan, phienhieudonvi);
             F.ShowDialog();
-            loaddtgv("exec hienthikehoach " + phienhieudonvi);
+            loaddtgv("exec hienthikehoach " + CboDonvi.Text);
         }
        
         private void dtgDSUser_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -105,7 +105,7 @@ namespace HeThongThongTin
             //var senderGrid = (DataGridView)sender;
             //Console.WriteLine(e.RowIndex);
             Console.WriteLine(e.ColumnIndex);
-            if (dtgDSUser.Rows[e.RowIndex].Cells["pheduyet"].Value.ToString() == "Chưa phê duyệt" && e.ColumnIndex == 8 && taikhoan.role == 1)
+            if (dtgDSUser.Rows[e.RowIndex].Cells["pheduyet"].Value.ToString() == "Chưa phê duyệt" && taikhoan.role == 1)
             {
                 using (HTTT db = new HTTT())
                 {
@@ -115,25 +115,35 @@ namespace HeThongThongTin
                     khct.PheDuyet = 1;
                     khct.TrangThai = "2";
                     db.SaveChanges();
-                    loaddtgv("exec hienthikehoach " + phienhieudonvi);
+                    loaddtgv("exec hienthikehoach " + CboDonvi.Text);
 
                 }
             }
 
-            else if (dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString() == "chưa hoàn thành" && e.ColumnIndex == 2 && taikhoan.role == 2)
+            else if (dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString() == "chưa hoàn thành"  && taikhoan.role == 2)
             {
-                using (HTTT db = new HTTT())
+                MessageBoxButtons check = MessageBoxButtons.YesNo;
+                DialogResult result;
+                result = MessageBox.Show("Đánh dấu hoàn thành và ghi nhật ký", "Xác nhận", check);
+                if(result == DialogResult.Yes)
                 {
-                    string makh = dtgDSUser.Rows[e.RowIndex].Cells["maKeHoach"].Value.ToString();
-                    Console.WriteLine(makh);
-                    KeHoachCongTac khct = db.KeHoachCongTacs.Where(p => p.MaKH.ToString() == makh).FirstOrDefault();
-                    khct.TrangThai = "4";
-                    db.SaveChanges();
-                    loaddtgv("exec hienthikehoach " + phienhieudonvi);
+                    using (HTTT db = new HTTT())
+                    {
+                        string makh = dtgDSUser.Rows[e.RowIndex].Cells["maKeHoach"].Value.ToString();
+                        Console.WriteLine(makh);
+                        KeHoachCongTac khct = db.KeHoachCongTacs.Where(p => p.MaKH.ToString() == makh).FirstOrDefault();
+                        khct.TrangThai = "4";
+                        db.SaveChanges();
+                        loaddtgv("exec hienthikehoach " + phienhieudonvi);
+                        GhiNhatKy ghi = new GhiNhatKy(int.Parse(makh));
+                        ghi.Show();
+                        loaddtgv("exec hienthikehoach " + phienhieudonvi);
 
+                    }
                 }
+
             }
-            else if (dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString() == "chờ phân công" && e.ColumnIndex == 2 && taikhoan.role == 2)
+            else if (dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString() == "chờ phân công"  && taikhoan.role == 2)
             {
                 using (HTTT db = new HTTT())
                 {
@@ -143,7 +153,6 @@ namespace HeThongThongTin
                     PhanCongDetail pcdt = new PhanCongDetail(taikhoan, makh);
                     pcdt.Show();
                    
-                    db.SaveChanges();
                     loaddtgv("exec hienthikehoach " + phienhieudonvi);
 
                 }
@@ -162,6 +171,17 @@ namespace HeThongThongTin
             //}
 
         }
-     }
+
+        private void btnNhatKyCV_Click(object sender, EventArgs e)
+        {
+            NhatKyCV nhatKyCV = new NhatKyCV(taikhoan);
+            //PhanCongDetail pcdt = new PhanCongDetail(tk, "3");
+            
+            nhatKyCV.ShowDialog();
+            this.Close();
+            //pcdt.Show();
+
+        }
+    }
     
 }

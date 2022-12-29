@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GhiNhatKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GhiNhatKy.Designer.cs">
+      <DependentUpon>GhiNhatKy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\CanBo.cs" />
     <Compile Include="Model\CapDonVi.cs" />
     <Compile Include="Model\DonVi.cs" />
@@ -159,6 +165,9 @@
     <Compile Include="ViewNhanXetNhatKy.Designer.cs">
       <DependentUpon>ViewNhanXetNhatKy.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GhiNhatKy.resx">
+      <DependentUpon>GhiNhatKy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KeHoachCV.resx">
       <DependentUpon>KeHoachCV.cs</DependentUpon>
     </EmbeddedResource>

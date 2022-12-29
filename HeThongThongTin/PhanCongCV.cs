@@ -12,9 +12,13 @@ using System.Windows.Forms;
 namespace HeThongThongTin
 {
     public partial class PhanCongCV : Form
+
     {
-        public PhanCongCV()
+        string phienhieudonvi;
+        TaiKhoan taikhoan = new TaiKhoan();
+        public PhanCongCV(TaiKhoan tk)
         {
+            this.taikhoan = tk;
             InitializeComponent();
             btnPhanCongCV.FillColor = Color.Purple;
 
@@ -31,7 +35,38 @@ namespace HeThongThongTin
 
         private void PhanCongCV_Load(object sender, EventArgs e)
         {
-            loadDTGV("exec phancongCV");
+            using (HTTT db = new HTTT())
+            {
+                switch (taikhoan.role)
+                {
+                    case 3:
+                        HocVien hocvien = db.HocViens.Where(c => c.MaTK == taikhoan.MaTK).FirstOrDefault();
+                        phienhieudonvi = hocvien.PhienHieuDonVi;
+                        label_Title.Text = "Đại Đội " + hocvien.PhienHieuDonVi.ToString().Substring(1);
+                        CboDonvi.Visible = false;
+                        //loadDTGV("exec phancongCV " + '');
+                        break;
+                    case 2:
+                        CanBo canbo = db.CanBoes.Where(c => c.MaTK == taikhoan.MaTK).FirstOrDefault();
+                        phienhieudonvi = canbo.PhienHieuDonVi;
+                        label_Title.Text = "Đại Đội " + canbo.PhienHieuDonVi.ToString().Substring(1);
+                        CboDonvi.Visible = false;
+                       
+
+                        break;
+                    case 1:
+                        CanBo cb = db.CanBoes.Where(c => c.MaTK == taikhoan.MaTK).FirstOrDefault();
+                        string dv2 = cb.PhienHieuDonVi.ToString().Substring(1);
+                        label_Title.Text = "Tiểu Đoàn " + dv2;
+                        List<DonVi> list_dv = db.DonVis.Where(c => c.MaCap == 2).ToList();
+                        foreach (var item in list_dv)
+                        {
+                            CboDonvi.Items.Add(item.PhienHieuDonVi);
+                        }
+                        break;
+                }
+            }
+           
         }
         private void loadDTGV(string query)
         {

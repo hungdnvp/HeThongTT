@@ -122,8 +122,12 @@ namespace HeThongThongTin
         private void btnKeHoachCT_Click_1(object sender, EventArgs e)
         {
             KeHoachCV nhatKyCV = new KeHoachCV(taikhoan);
-            this.Hide();
-            nhatKyCV.Show();
+            nhatKyCV.ShowDialog();
+        
+            //if(nhatKyCV.WindowState == FormWindowState.Minimized)
+            //{
+            //    this.Show();
+            //}
         }
     }
 }

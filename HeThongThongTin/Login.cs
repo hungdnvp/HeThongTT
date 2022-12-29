@@ -45,7 +45,7 @@ namespace HeThongThongTin
                 {
                     NhatKyCV nhatKyCV = new NhatKyCV(tk);
                     //PhanCongDetail pcdt = new PhanCongDetail(tk, "3");
-                    this.Hide();
+                  
                     nhatKyCV.Show();
                     //pcdt.Show();
                 }

@@ -84,6 +84,8 @@ namespace HeThongThongTin
             {
                 KeHoachCongTac kh = db.KeHoachCongTacs.Find(int.Parse(MaKH));
                 kh.TrangThai = "3";
+                db.SaveChanges();
+
             }
         }
     }
