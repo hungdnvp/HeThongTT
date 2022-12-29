@@ -174,12 +174,7 @@ namespace HeThongThongTin
 
         private void btnNhatKyCV_Click(object sender, EventArgs e)
         {
-            NhatKyCV nhatKyCV = new NhatKyCV(taikhoan);
-            //PhanCongDetail pcdt = new PhanCongDetail(tk, "3");
-            
-            nhatKyCV.ShowDialog();
             this.Close();
-            //pcdt.Show();
 
         }
     }

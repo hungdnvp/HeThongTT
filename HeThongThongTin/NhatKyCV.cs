@@ -20,6 +20,8 @@ namespace HeThongThongTin
         {
             this.taikhoan = tk;
             InitializeComponent();
+            comboSX.Items.Add("Ngày");
+            comboSX.Items.Add("Trạng Thái");
             btnNhatKyCV.FillColor = Color.Purple;
         }
 
@@ -126,13 +128,13 @@ namespace HeThongThongTin
 
         private void btnKeHoachCT_Click_1(object sender, EventArgs e)
         {
-            KeHoachCV nhatKyCV = new KeHoachCV(taikhoan);
-            nhatKyCV.ShowDialog();
-        
-            //if(nhatKyCV.WindowState == FormWindowState.Minimized)
-            //{
-            //    this.Show();
-            //}
+            KeHoachCV kehoach = new KeHoachCV(taikhoan);
+            this.Hide();
+            DialogResult result = kehoach.ShowDialog();
+            if (result == DialogResult.Cancel)
+            {
+                this.Show();
+            }
         }
 
         private void btnTTGiamSat_Click(object sender, EventArgs e)
@@ -141,6 +143,22 @@ namespace HeThongThongTin
             this.Hide();
             tt.Show();
 
+        }
+
+        private void comboSX_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboSX.Text == "Ngày")
+            {
+                ShowNhatKy();
+            }
+            else
+            {
+                using (HTTT db = new HTTT())
+                {
+                    List<ViewNhatKy> list_nk = db.Database.SqlQuery<ViewNhatKy>("View_NhatKySX " + phienhieudonvi).ToList();
+                    dtGV.DataSource = list_nk;
+                }
+            }
         }
     }
 }

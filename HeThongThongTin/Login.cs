@@ -45,13 +45,16 @@ namespace HeThongThongTin
                 {
                     NhatKyCV nhatKyCV = new NhatKyCV(tk);
                     //PhanCongDetail pcdt = new PhanCongDetail(tk, "3");
-                  
-                    nhatKyCV.Show();
-                    //pcdt.Show();
+                    this.Hide();
+                    DialogResult result = nhatKyCV.ShowDialog();
+                    if (result == DialogResult.Cancel)
+                    {
+                        this.Show();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Sai Tên Đăng Nhập hoặc Mật Khẩu", "Lỗi",MessageBoxButtons.OK);
+                    MessageBox.Show("Sai Tên Đăng Nhập hoặc Mật Khẩu", "Lỗi", MessageBoxButtons.OK);
                 }
             }
         }
