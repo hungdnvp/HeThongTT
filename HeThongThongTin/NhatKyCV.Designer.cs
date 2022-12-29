@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhatKyCV));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnQuaylai = new Guna.UI2.WinForms.Guna2Button();
@@ -166,7 +166,7 @@
             this.lableDonVi.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lableDonVi.Location = new System.Drawing.Point(40, 36);
             this.lableDonVi.Name = "lableDonVi";
-            this.lableDonVi.Size = new System.Drawing.Size(74, 26);
+            this.lableDonVi.Size = new System.Drawing.Size(84, 28);
             this.lableDonVi.TabIndex = 12;
             this.lableDonVi.Text = "Đơn vị :";
             // 
@@ -222,6 +222,7 @@
             this.btnTTGiamSat.Size = new System.Drawing.Size(263, 65);
             this.btnTTGiamSat.TabIndex = 4;
             this.btnTTGiamSat.Text = "Trung Tâm Giám Sát";
+            this.btnTTGiamSat.Click += new System.EventHandler(this.btnTTGiamSat_Click);
             // 
             // btnKeHoachCT
             // 
@@ -303,7 +304,7 @@
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(1102, 13);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(299, 49);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(342, 55);
             this.guna2HtmlLabel3.TabIndex = 15;
             this.guna2HtmlLabel3.Text = "NHẬT KÝ CÔNG VIỆC\r\n";
             // 
@@ -314,7 +315,7 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(217, 69);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(491, 49);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(566, 55);
             this.guna2HtmlLabel2.TabIndex = 14;
             this.guna2HtmlLabel2.Text = "Phần mềm hỗ trợ chỉ huy điều hành";
             // 
@@ -325,7 +326,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(228, 10);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(480, 52);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(550, 60);
             this.guna2HtmlLabel1.TabIndex = 13;
             this.guna2HtmlLabel1.Text = "HỌC VIỆN KỸ THUẬT QUÂN SỰ";
             // 
@@ -356,18 +357,18 @@
             // 
             // dtGV
             // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dtGV.ColumnHeadersHeight = 22;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtGV.ColumnHeadersHeight = 25;
             this.dtGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNK,
@@ -378,25 +379,25 @@
             this.DiaDiem,
             this.NhanXet,
             this.ThemNX});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtGV.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtGV.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtGV.Location = new System.Drawing.Point(34, 353);
             this.dtGV.Name = "dtGV";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dtGV.RowHeadersVisible = false;
             this.dtGV.RowHeadersWidth = 47;
             this.dtGV.Size = new System.Drawing.Size(1488, 596);
@@ -413,7 +414,7 @@
             this.dtGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dtGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtGV.ThemeStyle.HeaderStyle.Height = 22;
+            this.dtGV.ThemeStyle.HeaderStyle.Height = 25;
             this.dtGV.ThemeStyle.ReadOnly = false;
             this.dtGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -450,9 +451,9 @@
             // HoanThanh
             // 
             this.HoanThanh.DataPropertyName = "ThoiGianHoanThanh";
-            dataGridViewCellStyle10.Format = "d";
-            dataGridViewCellStyle10.NullValue = null;
-            this.HoanThanh.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.HoanThanh.DefaultCellStyle = dataGridViewCellStyle3;
             this.HoanThanh.FillWeight = 20F;
             this.HoanThanh.HeaderText = "Hoàn thành";
             this.HoanThanh.MinimumWidth = 6;
@@ -469,7 +470,7 @@
             // DiaDiem
             // 
             this.DiaDiem.DataPropertyName = "DiaDiem";
-            this.DiaDiem.FillWeight = 15F;
+            this.DiaDiem.FillWeight = 25F;
             this.DiaDiem.HeaderText = "Địa điểm";
             this.DiaDiem.MinimumWidth = 6;
             this.DiaDiem.Name = "DiaDiem";
@@ -477,9 +478,9 @@
             // NhanXet
             // 
             this.NhanXet.DataPropertyName = "NhanXet";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.NullValue = "Xem";
-            this.NhanXet.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.NullValue = "Xem";
+            this.NhanXet.DefaultCellStyle = dataGridViewCellStyle4;
             this.NhanXet.FillWeight = 18F;
             this.NhanXet.HeaderText = "Nhận xét";
             this.NhanXet.MinimumWidth = 6;
@@ -492,10 +493,10 @@
             // ThemNX
             // 
             this.ThemNX.DataPropertyName = "ThemNX";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.NullValue = "Thêm";
-            this.ThemNX.DefaultCellStyle = dataGridViewCellStyle12;
-            this.ThemNX.FillWeight = 18F;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.NullValue = "Thêm";
+            this.ThemNX.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ThemNX.FillWeight = 24F;
             this.ThemNX.HeaderText = "Thêm Nhận Xét";
             this.ThemNX.MinimumWidth = 6;
             this.ThemNX.Name = "ThemNX";

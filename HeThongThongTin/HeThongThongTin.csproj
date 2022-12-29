@@ -121,6 +121,12 @@
     <Compile Include="PhanCongDetail.Designer.cs">
       <DependentUpon>PhanCongDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="sanH4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sanH4.Designer.cs">
+      <DependentUpon>sanH4.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemNX.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PhanCongDetail.resx">
       <DependentUpon>PhanCongDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sanH4.resx">
+      <DependentUpon>sanH4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemNX.resx">
       <DependentUpon>ThemNX.cs</DependentUpon>
