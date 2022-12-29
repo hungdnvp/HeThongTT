@@ -13,6 +13,6 @@ namespace HeThongThongTin.Model
         public string TenHV { get; set; }
         public string NoiDungCV { get; set; }
         public string TrangThai { get; set; }
-     
+        public string NoiDungKH { get; set; }   
     }
 }

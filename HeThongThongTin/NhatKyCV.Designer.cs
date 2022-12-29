@@ -62,6 +62,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.dtGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.comboSX = new Guna.UI2.WinForms.Guna2ComboBox();
             this.MaNK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThoiGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -171,7 +173,7 @@
             this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(295, 36);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(198, 28);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(173, 26);
             this.guna2HtmlLabel4.TabIndex = 17;
             this.guna2HtmlLabel4.Text = "Ngày Hoàn Thành:";
             // 
@@ -182,7 +184,7 @@
             this.lableDonVi.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lableDonVi.Location = new System.Drawing.Point(40, 36);
             this.lableDonVi.Name = "lableDonVi";
-            this.lableDonVi.Size = new System.Drawing.Size(84, 28);
+            this.lableDonVi.Size = new System.Drawing.Size(74, 26);
             this.lableDonVi.TabIndex = 12;
             this.lableDonVi.Text = "Đơn vị :";
             // 
@@ -207,19 +209,20 @@
             this.label_Title.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label_Title.Location = new System.Drawing.Point(1174, 74);
             this.label_Title.Name = "label_Title";
-            this.label_Title.Size = new System.Drawing.Size(189, 44);
+            this.label_Title.Size = new System.Drawing.Size(163, 38);
             this.label_Title.TabIndex = 16;
             this.label_Title.Text = "Đại Đội 155";
             // 
             // btnTTGiamSat
             // 
+            this.btnTTGiamSat.BorderRadius = 4;
             this.btnTTGiamSat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTTGiamSat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTTGiamSat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTTGiamSat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTTGiamSat.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTTGiamSat.ForeColor = System.Drawing.Color.White;
-            this.btnTTGiamSat.Location = new System.Drawing.Point(1088, 8);
+            this.btnTTGiamSat.Location = new System.Drawing.Point(1028, 8);
             this.btnTTGiamSat.Name = "btnTTGiamSat";
             this.btnTTGiamSat.Size = new System.Drawing.Size(263, 65);
             this.btnTTGiamSat.TabIndex = 4;
@@ -228,13 +231,14 @@
             // 
             // btnKeHoachCT
             // 
+            this.btnKeHoachCT.BorderRadius = 4;
             this.btnKeHoachCT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKeHoachCT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKeHoachCT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnKeHoachCT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnKeHoachCT.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKeHoachCT.ForeColor = System.Drawing.Color.White;
-            this.btnKeHoachCT.Location = new System.Drawing.Point(803, 8);
+            this.btnKeHoachCT.Location = new System.Drawing.Point(697, 9);
             this.btnKeHoachCT.Name = "btnKeHoachCT";
             this.btnKeHoachCT.Size = new System.Drawing.Size(258, 64);
             this.btnKeHoachCT.TabIndex = 3;
@@ -243,45 +247,34 @@
             // 
             // btnPhanCongCV
             // 
+            this.btnPhanCongCV.BorderRadius = 4;
             this.btnPhanCongCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnPhanCongCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnPhanCongCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnPhanCongCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnPhanCongCV.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhanCongCV.ForeColor = System.Drawing.Color.White;
-            this.btnPhanCongCV.Location = new System.Drawing.Point(493, 9);
+            this.btnPhanCongCV.Location = new System.Drawing.Point(329, 9);
             this.btnPhanCongCV.Name = "btnPhanCongCV";
             this.btnPhanCongCV.Size = new System.Drawing.Size(272, 64);
             this.btnPhanCongCV.TabIndex = 2;
             this.btnPhanCongCV.Text = "Phân Công Công Việc";
+            this.btnPhanCongCV.Click += new System.EventHandler(this.btnPhanCongCV_Click);
             // 
             // btnNhatKyCV
             // 
+            this.btnNhatKyCV.BorderRadius = 4;
             this.btnNhatKyCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnNhatKyCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnNhatKyCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnNhatKyCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnNhatKyCV.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhatKyCV.ForeColor = System.Drawing.Color.White;
-            this.btnNhatKyCV.Location = new System.Drawing.Point(228, 9);
+            this.btnNhatKyCV.Location = new System.Drawing.Point(24, 9);
             this.btnNhatKyCV.Name = "btnNhatKyCV";
             this.btnNhatKyCV.Size = new System.Drawing.Size(236, 64);
             this.btnNhatKyCV.TabIndex = 1;
             this.btnNhatKyCV.Text = "Nhật Ký Công Việc";
-            // 
-            // btnTrangChu
-            // 
-            this.btnTrangChu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTrangChu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTrangChu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTrangChu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTrangChu.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrangChu.ForeColor = System.Drawing.Color.White;
-            this.btnTrangChu.Location = new System.Drawing.Point(6, 8);
-            this.btnTrangChu.Name = "btnTrangChu";
-            this.btnTrangChu.Size = new System.Drawing.Size(196, 65);
-            this.btnTrangChu.TabIndex = 0;
-            this.btnTrangChu.Text = "Trang Chủ";
             // 
             // guna2Panel1
             // 
@@ -294,7 +287,6 @@
             this.guna2Panel1.Controls.Add(this.btnKeHoachCT);
             this.guna2Panel1.Controls.Add(this.btnPhanCongCV);
             this.guna2Panel1.Controls.Add(this.btnNhatKyCV);
-            this.guna2Panel1.Controls.Add(this.btnTrangChu);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 150);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1580, 81);
@@ -337,7 +329,7 @@
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(1102, 13);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(342, 55);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(299, 49);
             this.guna2HtmlLabel3.TabIndex = 15;
             this.guna2HtmlLabel3.Text = "NHẬT KÝ CÔNG VIỆC\r\n";
             // 
@@ -348,7 +340,7 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(217, 69);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(566, 55);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(491, 49);
             this.guna2HtmlLabel2.TabIndex = 14;
             this.guna2HtmlLabel2.Text = "Phần mềm hỗ trợ chỉ huy điều hành";
             // 
@@ -359,7 +351,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(228, 10);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(550, 60);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(480, 52);
             this.guna2HtmlLabel1.TabIndex = 13;
             this.guna2HtmlLabel1.Text = "HỌC VIỆN KỸ THUẬT QUÂN SỰ";
             // 
@@ -421,7 +413,7 @@
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtGV.DefaultCellStyle = dataGridViewCellStyle13;
             this.dtGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtGV.Location = new System.Drawing.Point(34, 353);
+            this.dtGV.Location = new System.Drawing.Point(0, 365);
             this.dtGV.Name = "dtGV";
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
@@ -433,7 +425,7 @@
             this.dtGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dtGV.RowHeadersVisible = false;
             this.dtGV.RowHeadersWidth = 47;
-            this.dtGV.Size = new System.Drawing.Size(1488, 596);
+            this.dtGV.Size = new System.Drawing.Size(1584, 596);
             this.dtGV.TabIndex = 20;
             this.dtGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -460,6 +452,7 @@
             // 
             // MaNK
             // 
+            this.MaNK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MaNK.DataPropertyName = "MaNK";
             this.MaNK.FillWeight = 20F;
             this.MaNK.HeaderText = "Mã Nhật Ký";
@@ -468,6 +461,7 @@
             // 
             // NoiDung
             // 
+            this.NoiDung.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NoiDung.DataPropertyName = "NoiDungKH";
             this.NoiDung.HeaderText = "Nội dung";
             this.NoiDung.MinimumWidth = 6;
@@ -475,6 +469,7 @@
             // 
             // ThoiGian
             // 
+            this.ThoiGian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ThoiGian.DataPropertyName = "ThoiGian";
             this.ThoiGian.FillWeight = 20F;
             this.ThoiGian.HeaderText = "Lên kế hoạch";
@@ -483,6 +478,7 @@
             // 
             // HoanThanh
             // 
+            this.HoanThanh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.HoanThanh.DataPropertyName = "ThoiGianHoanThanh";
             dataGridViewCellStyle10.Format = "d";
             dataGridViewCellStyle10.NullValue = null;
@@ -494,6 +490,7 @@
             // 
             // TrangThai
             // 
+            this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TrangThai.DataPropertyName = "TrangThai";
             this.TrangThai.FillWeight = 60F;
             this.TrangThai.HeaderText = "Trạng thái";
@@ -502,6 +499,7 @@
             // 
             // DiaDiem
             // 
+            this.DiaDiem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.DiaDiem.DataPropertyName = "DiaDiem";
             this.DiaDiem.FillWeight = 34F;
             this.DiaDiem.HeaderText = "Địa điểm";
@@ -510,6 +508,7 @@
             // 
             // NhanXet
             // 
+            this.NhanXet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NhanXet.DataPropertyName = "NhanXet";
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.DodgerBlue;
@@ -526,6 +525,7 @@
             // 
             // ThemNX
             // 
+            this.ThemNX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ThemNX.DataPropertyName = "ThemNX";
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle12.BackColor = System.Drawing.Color.SlateBlue;
@@ -567,9 +567,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2ComboBox CboDonvi;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel lableDonVi;
@@ -578,7 +575,6 @@
         private Guna.UI2.WinForms.Guna2Button btnKeHoachCT;
         private Guna.UI2.WinForms.Guna2Button btnPhanCongCV;
         private Guna.UI2.WinForms.Guna2Button btnNhatKyCV;
-        private Guna.UI2.WinForms.Guna2Button btnTrangChu;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel label_Title;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;

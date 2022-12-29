@@ -65,5 +65,15 @@ namespace HeThongThongTin
                 }
             }
         }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQuaylai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
