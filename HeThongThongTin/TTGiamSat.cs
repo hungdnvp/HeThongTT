@@ -22,13 +22,13 @@ namespace HeThongThongTin
 
         private void guna2Panel3_Paint(object sender, PaintEventArgs e)
         {
-            sanH4 h4 = new sanH4();
-            this.Hide();
-            DialogResult result = h4.ShowDialog();
-            if (result == DialogResult.Cancel)
-            {
-                this.Show();
-            }
+            //sanH4 h4 = new sanH4();
+            //this.Hide();
+            //DialogResult result = h4.ShowDialog();
+            //if (result == DialogResult.Cancel)
+            //{
+            //    this.Show();
+            //}
 
         }
 
@@ -84,6 +84,18 @@ namespace HeThongThongTin
 
         private void guna2HtmlLabel6_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void guna2HtmlLabel7_Click(object sender, EventArgs e)
+        {
+            Hamxe h4 = new Hamxe();
+            this.Hide();
+            DialogResult result = h4.ShowDialog();
+            if (result == DialogResult.Cancel)
+            {
+                this.Show();
+            }
 
         }
     }

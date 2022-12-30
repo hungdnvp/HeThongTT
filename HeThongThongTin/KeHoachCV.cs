@@ -104,7 +104,7 @@ namespace HeThongThongTin
             //var senderGrid = (DataGridView)sender;
             //Console.WriteLine(e.RowIndex);
             Console.WriteLine(e.ColumnIndex);
-            if (dtgDSUser.Rows[e.RowIndex].Cells["pheduyet"].Value.ToString() == "Chưa phê duyệt" && taikhoan.role == 1)
+            if (dtgDSUser.Rows[e.RowIndex].Cells["pheduyet"].Value.ToString() == "Chưa phê duyệt" && e.ColumnIndex==7 && taikhoan.role == 1)
             {
                 using (HTTT db = new HTTT())
                 {
@@ -119,7 +119,7 @@ namespace HeThongThongTin
                 }
             }
 
-            else if (dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString() == "chưa hoàn thành" && taikhoan.role == 2)
+            else if (dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString() == "chưa hoàn thành" && e.ColumnIndex==7 && taikhoan.role == 2)
             {
                 MessageBoxButtons check = MessageBoxButtons.YesNo;
                 DialogResult result;
@@ -169,6 +169,7 @@ namespace HeThongThongTin
             //    }
 
             //}
+            
 
         }
 

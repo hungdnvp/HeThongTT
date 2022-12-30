@@ -206,6 +206,7 @@
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(115, 22);
             this.guna2HtmlLabel7.TabIndex = 0;
             this.guna2HtmlLabel7.Text = "HẦM GỬI XE";
+            this.guna2HtmlLabel7.Click += new System.EventHandler(this.guna2HtmlLabel7_Click);
             // 
             // guna2Panelbãia
             // 

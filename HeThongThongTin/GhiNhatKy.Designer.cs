@@ -45,9 +45,9 @@
             // 
             // lableDonVi
             // 
-            this.lableDonVi.BackColor = System.Drawing.Color.Ivory;
+            this.lableDonVi.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lableDonVi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lableDonVi.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lableDonVi.ForeColor = System.Drawing.Color.Black;
             this.lableDonVi.Location = new System.Drawing.Point(12, 95);
             this.lableDonVi.Name = "lableDonVi";
             this.lableDonVi.Size = new System.Drawing.Size(133, 26);
@@ -56,10 +56,10 @@
             // 
             // guna2HtmlLabel1
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(47, 255);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(26, 255);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(98, 26);
             this.guna2HtmlLabel1.TabIndex = 14;
@@ -90,7 +90,7 @@
             this.btnGhiNhatKy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnGhiNhatKy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGhiNhatKy.ForeColor = System.Drawing.Color.White;
-            this.btnGhiNhatKy.Location = new System.Drawing.Point(283, 335);
+            this.btnGhiNhatKy.Location = new System.Drawing.Point(241, 355);
             this.btnGhiNhatKy.Name = "btnGhiNhatKy";
             this.btnGhiNhatKy.Size = new System.Drawing.Size(180, 45);
             this.btnGhiNhatKy.TabIndex = 16;
