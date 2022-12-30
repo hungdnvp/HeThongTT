@@ -77,7 +77,7 @@
             // txbMatKhau
             // 
             this.txbMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbMatKhau.DefaultText = "hung12345";
+            this.txbMatKhau.DefaultText = "";
             this.txbMatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txbMatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txbMatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -88,7 +88,7 @@
             this.txbMatKhau.Location = new System.Drawing.Point(169, 202);
             this.txbMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbMatKhau.Name = "txbMatKhau";
-            this.txbMatKhau.PasswordChar = '\0';
+            this.txbMatKhau.PasswordChar = '*';
             this.txbMatKhau.PlaceholderText = "";
             this.txbMatKhau.SelectedText = "";
             this.txbMatKhau.Size = new System.Drawing.Size(305, 36);
@@ -97,7 +97,7 @@
             // txbTenDangNhap
             // 
             this.txbTenDangNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbTenDangNhap.DefaultText = "QuangHung";
+            this.txbTenDangNhap.DefaultText = "Tên tài khoản";
             this.txbTenDangNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txbTenDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txbTenDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -120,7 +120,7 @@
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(65, 212);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(93, 28);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(83, 26);
             this.guna2HtmlLabel3.TabIndex = 4;
             this.guna2HtmlLabel3.Text = "Mật khẩu";
             // 
@@ -130,7 +130,7 @@
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(19, 148);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(144, 28);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(129, 26);
             this.guna2HtmlLabel2.TabIndex = 3;
             this.guna2HtmlLabel2.Text = "Tên đăng nhập";
             // 
@@ -140,7 +140,7 @@
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(201, 41);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(192, 44);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(167, 39);
             this.guna2HtmlLabel1.TabIndex = 2;
             this.guna2HtmlLabel1.Text = "ĐĂNG NHẬP";
             // 

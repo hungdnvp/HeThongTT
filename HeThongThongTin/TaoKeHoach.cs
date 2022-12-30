@@ -44,6 +44,7 @@ namespace HeThongThongTin
             txbTPThucHien.Text = "";
             cboChiHuy.Text = "";
 
+
         }
 
         private void btnTaomoi_Click(object sender, EventArgs e)
@@ -58,9 +59,13 @@ namespace HeThongThongTin
                         khct.PhienHieuDonVi= phienhieudonvi;
                         khct.DiaDiem = txbDiaDiem.Text;
                         khct.MaTrucBan = 1;
-                        //khct.CanBo = cboChiHuy.Text;
-                        //khct=timeKH.
-                        //httt.KeHoachCongTacs.Add(khct);
+                        khct.PheDuyet = 0;
+                        khct.TrangThai = "1";
+                        var cb = httt.CanBoes.FirstOrDefault(c => c.HoTen == cboChiHuy.Text);
+
+                        khct.MaChiHuy = cb.MaCB;
+                        khct.ThoiGian = timeKH.Value.Date + timeKH2.Value.TimeOfDay;
+                        httt.KeHoachCongTacs.Add(khct);
                         httt.SaveChanges();
                         MessageBox.Show("Thêm thành công", "Thông báo");
                         refesh();
@@ -72,6 +77,14 @@ namespace HeThongThongTin
                 MessageBox.Show("Thêm thất bại", "Thông báo");
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        private void TaoKeHoach_Load(object sender, EventArgs e)
+        {
+            timeKH.Format = DateTimePickerFormat.Custom;
+            timeKH.CustomFormat = "MM/dd/yyyy";
+            timeKH2.Format = DateTimePickerFormat.Time;
+            timeKH2.ShowUpDown= true;
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace HeThongThongTin
 {
@@ -19,7 +20,7 @@ namespace HeThongThongTin
         {
             this.taikhoan = tk;
             InitializeComponent();
-          
+
             //using (HTTT httt = new HTTT())
             //{
             //    var DV = httt.DonVis.Where(p => p.MaCap == 2).ToList();
@@ -97,7 +98,7 @@ namespace HeThongThongTin
             F.ShowDialog();
             loaddtgv("exec hienthikehoach " + CboDonvi.Text);
         }
-       
+
         private void dtgDSUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //var senderGrid = (DataGridView)sender;
@@ -118,12 +119,12 @@ namespace HeThongThongTin
                 }
             }
 
-            else if (dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString() == "chưa hoàn thành"  && taikhoan.role == 2)
+            else if (dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString() == "chưa hoàn thành" && taikhoan.role == 2)
             {
                 MessageBoxButtons check = MessageBoxButtons.YesNo;
                 DialogResult result;
                 result = MessageBox.Show("Đánh dấu hoàn thành và ghi nhật ký", "Xác nhận", check);
-                if(result == DialogResult.Yes)
+                if (result == DialogResult.Yes)
                 {
                     using (HTTT db = new HTTT())
                     {
@@ -141,7 +142,7 @@ namespace HeThongThongTin
                 }
 
             }
-            else if (dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString() == "chờ phân công"  && taikhoan.role == 2)
+            else if (dtgDSUser.Rows[e.RowIndex].Cells["trangthai"].Value.ToString() == "chờ phân công" && taikhoan.role == 2)
             {
                 using (HTTT db = new HTTT())
                 {
@@ -150,7 +151,7 @@ namespace HeThongThongTin
                     KeHoachCongTac khct = db.KeHoachCongTacs.Where(p => p.MaKH.ToString() == makh).FirstOrDefault();
                     PhanCongDetail pcdt = new PhanCongDetail(taikhoan, makh);
                     pcdt.Show();
-                   
+
                     loaddtgv("exec hienthikehoach " + phienhieudonvi);
                     dtgDSUser.Refresh();
 
@@ -194,12 +195,34 @@ namespace HeThongThongTin
                     this.Show();
                 }
             }
+            if (taikhoan.role == 1)
+            {
+                TaoKeHoach kehoach = new TaoKeHoach(taikhoan,CboDonvi.Text);
+                this.Hide();
+                DialogResult result = kehoach.ShowDialog();
+                if (result == DialogResult.Cancel)
+                {
+                    this.Show();
+                }
+            }
+
+
             else
             {
                 MessageBox.Show("Bạn không có quyền truy cập", "Thông báo");
-            }    
-           
+            }
+
+        }
+
+        private void time_ValueChanged(object sender, EventArgs e)
+        {
+            string date = time.Value.Date.ToString("yyyy-MM-dd");
+            using (HTTT db = new HTTT())
+            {
+                List<viewKeHoach> list_nk = db.Database.SqlQuery<viewKeHoach>("hienthikehoach2 " + phienhieudonvi + ", '" + date + "'").ToList();
+                dtgDSUser.DataSource = list_nk;
+
+            }
         }
     }
-    
 }

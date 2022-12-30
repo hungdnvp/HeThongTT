@@ -183,6 +183,7 @@
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(67, 22);
             this.guna2HtmlLabel6.TabIndex = 0;
             this.guna2HtmlLabel6.Text = "SÂN H4";
+            this.guna2HtmlLabel6.Click += new System.EventHandler(this.guna2HtmlLabel6_Click);
             // 
             // guna2Panelhamxe
             // 

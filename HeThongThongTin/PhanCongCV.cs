@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace HeThongThongTin
 {
@@ -126,6 +127,28 @@ namespace HeThongThongTin
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void name_ValueChanged(object sender, EventArgs e)
+        {
+            string date = name.Value.Date.ToString("yyyy-MM-dd");
+            using (HTTT db = new HTTT())
+            {
+                if (taikhoan.role == 3)
+                {
+                    HocVien hocvien = db.HocViens.Where(c => c.MaTK == taikhoan.MaTK).FirstOrDefault();
+                    phienhieudonvi = hocvien.PhienHieuDonVi;
+                    List<viewPhanCong> list_nk = db.Database.SqlQuery<viewPhanCong>("phancong_2 " + "'" + hocvien.TenHV + "'," + phienhieudonvi + ", '" + date + "'").ToList();
+                    dtgDSUser.DataSource = list_nk;
+                }
+                else
+                {
+                    List<viewPhanCong> list_nk = db.Database.SqlQuery<viewPhanCong>("phancong_2 " + "''," + phienhieudonvi + ", '" + date + "'").ToList();
+                    dtgDSUser.DataSource = list_nk;
+
+                }
+
+            }
         }
     }
     }

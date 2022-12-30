@@ -65,7 +65,7 @@ namespace HeThongThongTin
                         pc.MaHV = item.MaHV;
                         pc.MaKH = int.Parse(MaKH);
                         pc.NoiDungCV = richTextBox1.Text;
-
+                        pc.HoanThanh = 0;
                         db.PhanCongs.Add(pc);
                         db.SaveChanges();
                     }

@@ -45,6 +45,7 @@
             this.timeKH = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnTaomoi = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.timeKH2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -53,7 +54,7 @@
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(247, 24);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(320, 38);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(279, 33);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "TẠO KẾ HOẠCH MỚI";
             // 
@@ -63,7 +64,7 @@
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(121, 110);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(135, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(117, 24);
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.Text = "Mã Kế Hoạch";
             // 
@@ -73,7 +74,7 @@
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(155, 186);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(93, 27);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(81, 24);
             this.guna2HtmlLabel3.TabIndex = 2;
             this.guna2HtmlLabel3.Text = "Nội Dung";
             // 
@@ -83,7 +84,7 @@
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(156, 449);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(92, 27);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(80, 24);
             this.guna2HtmlLabel4.TabIndex = 3;
             this.guna2HtmlLabel4.Text = "Địa Điểm";
             // 
@@ -93,7 +94,7 @@
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(121, 516);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(131, 27);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(115, 24);
             this.guna2HtmlLabel5.TabIndex = 4;
             this.guna2HtmlLabel5.Text = "Mã Trực Ban";
             // 
@@ -103,7 +104,7 @@
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(166, 256);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(82, 27);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(70, 24);
             this.guna2HtmlLabel6.TabIndex = 5;
             this.guna2HtmlLabel6.Text = "Chỉ Huy";
             // 
@@ -113,7 +114,7 @@
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(42, 315);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(227, 27);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(194, 24);
             this.guna2HtmlLabel7.TabIndex = 6;
             this.guna2HtmlLabel7.Text = "Thành Phần Thực Hiện";
             // 
@@ -123,7 +124,7 @@
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(149, 384);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(100, 27);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(87, 24);
             this.guna2HtmlLabel8.TabIndex = 7;
             this.guna2HtmlLabel8.Text = "Thời Gian";
             // 
@@ -147,7 +148,7 @@
             this.txbMaKh.PasswordChar = '\0';
             this.txbMaKh.PlaceholderText = "";
             this.txbMaKh.SelectedText = "";
-            this.txbMaKh.Size = new System.Drawing.Size(368, 55);
+            this.txbMaKh.Size = new System.Drawing.Size(435, 55);
             this.txbMaKh.TabIndex = 8;
             // 
             // txbNoiDung
@@ -170,7 +171,7 @@
             this.txbNoiDung.PasswordChar = '\0';
             this.txbNoiDung.PlaceholderText = "";
             this.txbNoiDung.SelectedText = "";
-            this.txbNoiDung.Size = new System.Drawing.Size(368, 55);
+            this.txbNoiDung.Size = new System.Drawing.Size(435, 55);
             this.txbNoiDung.TabIndex = 9;
             // 
             // txbTPThucHien
@@ -193,7 +194,7 @@
             this.txbTPThucHien.PasswordChar = '\0';
             this.txbTPThucHien.PlaceholderText = "";
             this.txbTPThucHien.SelectedText = "";
-            this.txbTPThucHien.Size = new System.Drawing.Size(368, 55);
+            this.txbTPThucHien.Size = new System.Drawing.Size(435, 55);
             this.txbTPThucHien.TabIndex = 10;
             // 
             // txbDiaDiem
@@ -210,13 +211,13 @@
             this.txbDiaDiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbDiaDiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txbDiaDiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbDiaDiem.Location = new System.Drawing.Point(275, 429);
+            this.txbDiaDiem.Location = new System.Drawing.Point(275, 435);
             this.txbDiaDiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbDiaDiem.Name = "txbDiaDiem";
             this.txbDiaDiem.PasswordChar = '\0';
             this.txbDiaDiem.PlaceholderText = "";
             this.txbDiaDiem.SelectedText = "";
-            this.txbDiaDiem.Size = new System.Drawing.Size(368, 55);
+            this.txbDiaDiem.Size = new System.Drawing.Size(435, 55);
             this.txbDiaDiem.TabIndex = 11;
             // 
             // txbMaTB
@@ -233,13 +234,13 @@
             this.txbMaTB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbMaTB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txbMaTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbMaTB.Location = new System.Drawing.Point(275, 505);
+            this.txbMaTB.Location = new System.Drawing.Point(275, 507);
             this.txbMaTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbMaTB.Name = "txbMaTB";
             this.txbMaTB.PasswordChar = '\0';
             this.txbMaTB.PlaceholderText = "";
             this.txbMaTB.SelectedText = "";
-            this.txbMaTB.Size = new System.Drawing.Size(368, 55);
+            this.txbMaTB.Size = new System.Drawing.Size(435, 56);
             this.txbMaTB.TabIndex = 12;
             // 
             // cboChiHuy
@@ -256,7 +257,7 @@
             this.cboChiHuy.ItemHeight = 30;
             this.cboChiHuy.Location = new System.Drawing.Point(275, 244);
             this.cboChiHuy.Name = "cboChiHuy";
-            this.cboChiHuy.Size = new System.Drawing.Size(368, 36);
+            this.cboChiHuy.Size = new System.Drawing.Size(435, 36);
             this.cboChiHuy.TabIndex = 13;
             // 
             // timeKH
@@ -266,11 +267,11 @@
             this.timeKH.FillColor = System.Drawing.Color.LightBlue;
             this.timeKH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.timeKH.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.timeKH.Location = new System.Drawing.Point(275, 372);
+            this.timeKH.Location = new System.Drawing.Point(275, 370);
             this.timeKH.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.timeKH.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.timeKH.Name = "timeKH";
-            this.timeKH.Size = new System.Drawing.Size(368, 51);
+            this.timeKH.Size = new System.Drawing.Size(228, 51);
             this.timeKH.TabIndex = 14;
             this.timeKH.Value = new System.DateTime(2022, 12, 28, 17, 29, 4, 183);
             // 
@@ -305,12 +306,28 @@
             this.guna2Button1.Text = "HUỶ";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // timeKH2
+            // 
+            this.timeKH2.BorderRadius = 4;
+            this.timeKH2.Checked = true;
+            this.timeKH2.FillColor = System.Drawing.Color.LightBlue;
+            this.timeKH2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.timeKH2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.timeKH2.Location = new System.Drawing.Point(535, 370);
+            this.timeKH2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeKH2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeKH2.Name = "timeKH2";
+            this.timeKH2.Size = new System.Drawing.Size(175, 51);
+            this.timeKH2.TabIndex = 17;
+            this.timeKH2.Value = new System.DateTime(2022, 12, 28, 17, 29, 4, 183);
+            // 
             // TaoKeHoach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(823, 711);
+            this.ClientSize = new System.Drawing.Size(871, 711);
+            this.Controls.Add(this.timeKH2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.btnTaomoi);
             this.Controls.Add(this.timeKH);
@@ -330,7 +347,8 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "TaoKeHoach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TaoKeHoach";
+            this.Text = "D";
+            this.Load += new System.EventHandler(this.TaoKeHoach_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +373,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker timeKH;
         private Guna.UI2.WinForms.Guna2Button btnTaomoi;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeKH2;
     }
 }

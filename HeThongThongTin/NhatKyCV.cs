@@ -204,6 +204,11 @@ namespace HeThongThongTin
                 ThemHocVien themhv = new ThemHocVien(phienhieudonvi);
                 themhv.ShowDialog();
             }
+            else if (comboThietLap.Text == "Thêm Cán Bộ")
+            {
+                ThemCanBo themcb = new ThemCanBo();
+                themcb.ShowDialog();
+            }
         }
 
         private void btnPhanCongCV_Click(object sender, EventArgs e)
@@ -215,11 +220,7 @@ namespace HeThongThongTin
             {
                 this.Show();
             }
-            else if (comboThietLap.Text == "Thêm Cán Bộ")
-            {
-                ThemCanBo themcb = new ThemCanBo();
-                themcb.ShowDialog();
-            }
+
 
         }
 

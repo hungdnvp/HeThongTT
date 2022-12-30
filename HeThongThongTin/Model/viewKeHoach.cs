@@ -13,7 +13,7 @@ namespace HeThongThongTin.Model
       
         public string NoiDungKH { set; get; }
        
-        public DateTime? ThoiGian { set; get; }
+        public string ThoiGian { set; get; }
         public string NhanXet { set; get; }
         public string chutri { set; get; }
         public string TPthuchien { set; get; }
